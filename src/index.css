@@ -1,0 +1,17 @@
+/* fira code font link  */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply max-w-[1782px] mx-auto font-fira bg-p2 rounded-lg border border-p4;
+}
+
+.menu_nav-items {
+  @apply flex items-center  h-full;
+}
+.menu_nav-items li {
+  @apply w-[121px] border-r border-p4 h-full flex justify-center items-center hover:text-white transition-all;
+}
