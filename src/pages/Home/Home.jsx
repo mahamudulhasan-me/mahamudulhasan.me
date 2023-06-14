@@ -30,7 +30,7 @@ const Home = () => {
       </div>
       <div className="w-1/2 relative h-full flex justify-start items-center">
         <div
-          className="rounded-lg border-4 border-[#0C1616]"
+          className="rounded-lg border-2 border-[#010e0e]"
           style={{
             width: "475px",
             height: "475px",
