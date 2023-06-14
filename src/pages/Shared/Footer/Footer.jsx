@@ -2,7 +2,7 @@ import { RiFacebookFill, RiGithubFill, RiLinkedinFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <footer className="absolute bottom-0 left-0 right-0 h-12 border-t border-p4 px-6 flex justify-between items-center text-s1 text-lg">
+    <footer className="bottom-0 left-0 right-0 h-12 border-t border-p4 px-6 flex justify-between items-center text-s1 text-lg">
       <div className="border-r border-p4 h-full flex justify-start items-center transition-all">
         find me in:
         <Link className="ml-5 w-14 hover:text-white border-x h-full border-p4 flex justify-center items-center">
@@ -13,7 +13,7 @@ const Footer = () => {
         </Link>
       </div>
       <div
-        className="w-2/12 border-l h-full flex justify-end items-center border-p4
+        className="min-w-2/12 border-l pl-5 h-full flex justify-end items-center border-p4
       "
       >
         <Link className="flex justify-end items-center gap-2 transition-all">

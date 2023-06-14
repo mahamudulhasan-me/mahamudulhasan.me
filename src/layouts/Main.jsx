@@ -1,12 +1,17 @@
+import Aos from "aos";
+import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Footer from "../pages/Shared/Footer/Footer";
 import Navbar from "../pages/Shared/Navbar/Navbar";
 
 const Main = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <div className="max-h-[calc(100vh-2px)]">
       <Navbar />
-      <div className="h-[calc(100vh-3.6rem)]">
+      <div className="h-[calc(100vh-6.6rem)]">
         <Outlet />
       </div>
       <Footer />

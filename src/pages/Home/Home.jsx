@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="w-4/5 pl-[5%] mx-auto flex justify-center items-center h-full gap-10">
-      <div className="w-1/2">
+    <div className="w-4/5  mx-auto flex justify-center items-center h-full gap-10">
+      <div className="">
         <div className="text-[#E5E9F0]">
           <p className="text-lg ">Hi all. I am</p>
           <h1 className="text-6xl">Mahamudul Hasan</h1>
@@ -28,7 +28,7 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div className="w-1/2 relative h-full flex justify-start items-center">
+      <div className="relative h-full flex justify-start items-center">
         <div
           className="rounded-lg border-2 border-[#010e0e]"
           style={{
@@ -36,7 +36,7 @@ const Home = () => {
             height: "475px",
             background:
               "linear-gradient(150.26deg, rgba(23, 85, 83, 0.7) 1.7%, rgba(67, 217, 173, 0.091) 81.82%)",
-            boxShadow: " inset 0px 2px 0px rgba(255, 255, 255, 0.3)",
+            boxShadow: "inset 0px 2px 0px rgba(255, 255, 255, 0.3)",
             backdropFilter: "blur(32px)",
           }}
         ></div>
