@@ -4,9 +4,11 @@ import Navbar from "../pages/Shared/Navbar/Navbar";
 
 const Main = () => {
   return (
-    <div className="h-[calc(100vh-2px)]">
+    <div className="max-h-[calc(100vh-2px)]">
       <Navbar />
-      <Outlet />
+      <div className="h-[calc(100vh-3.6rem)]">
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );
