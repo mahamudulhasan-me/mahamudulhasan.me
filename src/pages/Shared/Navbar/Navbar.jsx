@@ -10,7 +10,7 @@ const Navbar = () => {
             <ActiveNav to={"/"}>_home</ActiveNav>
           </li>
           <li>
-            <ActiveNav to={"/about"}>_about-me</ActiveNav>
+            <ActiveNav to={"/about/professional-info"}>_about-me</ActiveNav>
           </li>
           <li>
             <ActiveNav to={"/projects"}>_projects</ActiveNav>

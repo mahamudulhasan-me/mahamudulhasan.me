@@ -1,6 +1,7 @@
 import { HiTerminal } from "react-icons/hi";
 import { RiGamepadFill, RiInformationFill } from "react-icons/ri";
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import AboutMainMenuActive from "../../components/ActiveLink/AboutMainMenuActive";
 const About = () => {
   return (
     <div className="grid grid-cols-12 h-full w-full">
@@ -8,15 +9,15 @@ const About = () => {
         <div className="h-full flex">
           <div className="w-14 border-r border-p4   pt-5">
             <div className=" text-2xl flex flex-col items-center gap-5 text-s1">
-              <Link>
+              <AboutMainMenuActive to={"/about/professional-info"}>
                 <HiTerminal />
-              </Link>
-              <Link to={"/about/personal-info"}>
+              </AboutMainMenuActive>
+              <AboutMainMenuActive to={"/about/personal-info"}>
                 <RiInformationFill />
-              </Link>
-              <Link>
+              </AboutMainMenuActive>
+              <AboutMainMenuActive to={"/about/hobbies"}>
                 <RiGamepadFill />
-              </Link>
+              </AboutMainMenuActive>
             </div>
           </div>
           <div className="w-full flex">

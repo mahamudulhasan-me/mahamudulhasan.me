@@ -1,12 +1,13 @@
 import { useState } from "react";
-import { FaGraduationCap } from "react-icons/fa";
+import { FaIndustry } from "react-icons/fa";
 import {
   RiArrowDownSLine,
   RiArrowRightSLine,
+  RiFileHistoryFill,
   RiFolder3Fill,
 } from "react-icons/ri";
 
-const NavEducation = ({ selectedStatus }) => {
+const NavExperience = ({ selectedStatus }) => {
   // const [eduInstitute, setEduInstitute] = useState("");
   const [showInfo, setShowInfo] = useState(false);
   return (
@@ -20,21 +21,22 @@ const NavEducation = ({ selectedStatus }) => {
         ) : (
           <RiArrowRightSLine size={24} />
         )}{" "}
-        <RiFolder3Fill size={24} color="#3A49A4" /> education
+        <RiFolder3Fill size={24} color="#43D9AD" />{" "}
+        <span className={`${showInfo && "text-white"}`}>experience</span>
       </div>
       {showInfo ? (
-        <div data-aos="fade-down" className="pl-8 mt-3 space-y-2">
+        <div data-aos="fade-in" className="pl-8 mt-3 space-y-2">
           <p
             onClick={() => selectedStatus("institute")}
             className="flex items-center gap-1"
           >
-            <FaGraduationCap size={24} /> institute
+            <RiFileHistoryFill size={24} /> work-history
           </p>
           <p
             onClick={() => selectedStatus("university")}
             className="flex items-center gap-1"
           >
-            <FaGraduationCap size={24} /> university
+            <FaIndustry size={24} /> industry
           </p>
         </div>
       ) : (
@@ -44,4 +46,4 @@ const NavEducation = ({ selectedStatus }) => {
   );
 };
 
-export default NavEducation;
+export default NavExperience;

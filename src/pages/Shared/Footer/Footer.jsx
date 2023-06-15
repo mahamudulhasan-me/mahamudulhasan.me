@@ -5,10 +5,18 @@ const Footer = () => {
     <footer className="bottom-0 left-0 right-0 h-12 border-t border-p4 px-6 flex justify-between items-center text-s1 text-lg">
       <div className="border-r border-p4 h-full flex justify-start items-center transition-all">
         find me in:
-        <Link className="ml-5 w-14 hover:text-white border-x h-full border-p4 flex justify-center items-center">
+        <Link
+          target="_blank"
+          to={"https://www.linkedin.com/in/mahamudulhasan-me/"}
+          className="ml-5 w-14 hover:text-white border-x h-full border-p4 flex justify-center items-center"
+        >
           <RiLinkedinFill size={24} />
         </Link>
-        <Link className="w-14  h-full hover:text-white border-p4 flex justify-center items-center">
+        <Link
+          target="_blank"
+          to={"https://www.facebook.com/mahamudulhasan.me"}
+          className="w-14  h-full hover:text-white border-p4 flex justify-center items-center"
+        >
           <RiFacebookFill size={24} />
         </Link>
       </div>

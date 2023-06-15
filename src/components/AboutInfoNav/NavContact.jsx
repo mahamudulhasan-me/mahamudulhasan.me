@@ -1,8 +1,22 @@
 import { useState } from "react";
-import { RiArrowDownSFill, RiArrowRightSFill } from "react-icons/ri";
+import {
+  RiArrowDownSFill,
+  RiArrowRightSFill,
+  RiMailFill,
+  RiPhoneFill,
+} from "react-icons/ri";
 
 const NavContact = () => {
   const [showInfo, setShowInfo] = useState(false);
+  const recipientEmail = "mahamudulhasan.org@gmail.com";
+  const subject = "Hello from me";
+
+  const composeEmail = () => {
+    const gmailURL = `https://mail.google.com/mail/?view=cm&to=${encodeURIComponent(
+      recipientEmail
+    )}&su=${encodeURIComponent(subject)}`;
+    window.open(gmailURL, "_blank");
+  };
   return (
     <>
       <div>
@@ -20,8 +34,24 @@ const NavContact = () => {
         </div>
 
         {showInfo ? (
-          <div data-aos="zoom-out-right" className={`px-3 mt-4 space-y-4 `}>
-            contact
+          <div data-aos="zoom-in" className={`px-3 mt-4 space-y-4 `}>
+            <p className="flex items-center gap-2 ">
+              <RiMailFill size={20} />{" "}
+              <span
+                className="hover:text-white hover:underline "
+                onClick={composeEmail}
+              >
+                send email
+              </span>
+            </p>
+            <span className="text-xs">mahamudulhasan.org@gmail.com</span>
+            <p className="flex items-center gap-2 ">
+              <RiPhoneFill size={20} />{" "}
+              <span className="hover:text-white hover:underline ">
+                +8801710142370 <br />
+                +8801511242370
+              </span>
+            </p>
           </div>
         ) : (
           ""

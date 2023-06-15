@@ -1,23 +1,47 @@
-import { createContext, useState } from "react";
+import { useState } from "react";
 import {
   RiArrowDownSFill,
   RiArrowRightSFill,
-  RiArrowRightSLine,
   RiCloseFill,
-  RiFolder3Fill,
 } from "react-icons/ri";
+import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight";
+import { atelierLakesideDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import NavBio from "../../../components/AboutInfoNav/NavBio";
 import NavContact from "../../../components/AboutInfoNav/NavContact";
 import NavEducation from "../../../components/AboutInfoNav/NavEducation";
 import NavInterested from "../../../components/AboutInfoNav/NavInterested";
 import Institute from "./Education/Institute";
-
-export const SelectedMenuContext = createContext();
+import University from "./Education/University";
 const PersonalInfo = () => {
-  const [showInfo, setShowInfo] = useState(false);
+  const [showInfo, setShowInfo] = useState(true);
   const [selectedMenu, setSelectedMenu] = useState("about-me");
+
+  const code = `
+  /**
+    * About me
+    * I have 5 years of еxperience in web
+    * development lorem ipsum dolor sit amet, 
+    * consectetur adipiscing elit, sed do eiusmod
+    * tempor incididunt ut labore et dolore
+    * magna aliqua. Ut enim ad minim veniam,
+    * quis nostrud exercitation ullamco laboris
+   * nisi ut aliquip ex ea commodo consequat.
+   * Duis aute irure dolor in reprehenderit in
+   *
+   * Duis aute irure dolor in reprehenderit in
+   * voluptate velit esse cillum dolore eu fugiat 
+   * nulla pariatur. Excepteur sint occaecat 
+   * officia deserunt mollit anim id est laborum.
+ */
+  `;
+
+  const customTheme = {
+    background: "transparent",
+    fontSize: "18px",
+  };
   return (
     <>
-      <div className="w-[26.6%] border-r border-p4 h-full flex justify-start text-s1">
+      <div className="w-[27.2%] border-r border-p4 h-full flex justify-start text-s1">
         <div className="w-full">
           <div>
             <div
@@ -37,12 +61,7 @@ const PersonalInfo = () => {
 
             {showInfo ? (
               <div data-aos="zoom-in" className={`px-3 mt-4 space-y-4 `}>
-                <div>
-                  <div className="flex items-center gap-1">
-                    <RiArrowRightSLine size={24} />{" "}
-                    <RiFolder3Fill size={24} color="#E99287" /> bio
-                  </div>
-                </div>
+                <NavBio />
                 {/* interested nav  */}
                 <NavInterested />
                 <div>
@@ -63,22 +82,23 @@ const PersonalInfo = () => {
             Personal Info <RiCloseFill size={20} />
           </span>
         </div>
-        {selectedMenu === "about-me" && (
-          <article>
-            About me I have 5 years of еxperience in web development lorem ipsum
-            dolor sit amet, * consectetur adipiscing elit, sed do eiusmod *
-            tempor incididunt ut labore et dolore * magna aliqua. Ut enim ad
-            minim veniam, * quis nostrud exercitation ullamco laboris * nisi ut
-            aliquip ex ea commodo consequat. * Duis aute irure dolor in
-            reprehenderit in * * Duis aute irure dolor in reprehenderit in *
-            voluptate velit esse cillum dolore eu fugiat * nulla pariatur.
-            Excepteur sint occaecat * officia deserunt mollit anim id est
-            laborum.
-          </article>
-        )}
-        <setSelectedMenu.Provider value={setSelectedMenu}>
+        <div className="px-3">
+          {selectedMenu === "about-me" && (
+            <article className="bg-inherit">
+              <SyntaxHighlighter
+                language="javascript"
+                style={atelierLakesideDark}
+                customStyle={customTheme}
+                showLineNumbers
+              >
+                {code}
+              </SyntaxHighlighter>
+            </article>
+          )}
+
           {selectedMenu === "institute" && <Institute />}
-        </setSelectedMenu.Provider>
+          {selectedMenu === "university" && <University />}
+        </div>
       </div>
     </>
   );
