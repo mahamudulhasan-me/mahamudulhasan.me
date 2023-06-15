@@ -57,7 +57,7 @@ const ProfessionalInfo = () => {
                 <RiArrowDownSFill size={24} />
               ) : (
                 <RiArrowRightSFill size={24} />
-              )}{" "}
+              )}
               professional-info
             </div>
 
