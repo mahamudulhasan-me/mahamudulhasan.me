@@ -15,3 +15,6 @@ body {
 .menu_nav-items li {
   @apply w-[121px] border-r border-p4 h-full flex justify-center items-center hover:text-white transition-all;
 }
+.category input[type="checkbox"] {
+  @apply w-5 h-5 mr-2;
+}
