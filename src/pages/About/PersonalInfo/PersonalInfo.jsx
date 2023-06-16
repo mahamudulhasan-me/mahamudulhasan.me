@@ -41,7 +41,7 @@ const PersonalInfo = () => {
   };
   return (
     <>
-      <div className="w-[27.2%] border-r border-p4 h-full flex justify-start text-s1">
+      <div className="w-[15.3rem] border-r border-p4 h-full flex justify-start text-s1">
         <div className="w-full">
           <div>
             <div
@@ -76,7 +76,7 @@ const PersonalInfo = () => {
           <NavContact />
         </div>
       </div>
-      <div className=" w-[73.4%] text-s1">
+      <div className="text-s1">
         <div className={`border-b  border-p4 w-full h-10`}>
           <span className="border-r border-p4  h-full flex gap-1 items-center px-3 cursor-pointer w-1/3">
             Personal Info <RiCloseFill size={20} />

@@ -30,7 +30,7 @@ const Home = () => {
       </div>
       <div className="relative h-full flex justify-start items-center">
         <div
-          className="rounded-lg border-2 border-[#010e0e]"
+          className="rounded-lg border-2 border-[#010e0e] flex justify-center items-center"
           style={{
             width: "475px",
             height: "475px",
@@ -39,7 +39,9 @@ const Home = () => {
             boxShadow: "inset 0px 2px 0px rgba(255, 255, 255, 0.3)",
             backdropFilter: "blur(32px)",
           }}
-        ></div>
+        >
+          <h1 className="text-white text-3xl">Snake Game coming soooon!</h1>
+        </div>
         <div className="absolute w-96 h-80 bg-a2 top-[20%] left-[10%] opacity-40 rotate-[20deg] blur-[87px] "></div>
         <div className="absolute bg-a2 w-40 rounded-3xl h-64 top-5 -left-5 rotate-[-35deg] opacity-40 blur-[87px] "></div>
         <div className="absolute w-80 h-[450px] bg-s3 bottom-0 right-20 rotate-[75deg] blur-[85px]"></div>

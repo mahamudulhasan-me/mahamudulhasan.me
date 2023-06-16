@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import { useState } from "react";
 import { BsFillBootstrapFill } from "react-icons/bs";
 import {
@@ -44,7 +45,7 @@ const Projects = () => {
   // }, [selectedCategories]);
   return (
     <div className="h-full w-full text-s1 flex">
-      <div className="w-[17.3rem] h-full border-r border-p4 ">
+      <div className="w-[19.43rem] h-full border-r border-p4 ">
         <div
           data-aos="fade-down"
           onClick={() => setShowInfo(!showInfo)}
@@ -121,7 +122,7 @@ const Projects = () => {
         )}
       </div>
 
-      <div className="w-[calc(100vw-17.3rem)] text-s1">
+      <div className="w-[calc(100vw-19rem)] text-s1">
         <div className={`border-b  border-p4 w-full h-10`}>
           <span className="border-r border-p4  h-full flex gap-1 items-center px-3 cursor-pointer w-fit">
             projects-{selectedCategories.map((item) => item + ",")}

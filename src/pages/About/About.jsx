@@ -6,8 +6,8 @@ const About = () => {
   return (
     <div className="grid grid-cols-12 h-full w-full">
       <div className="col-span-7 border-r border-p4 w-full h-full">
-        <div className="h-full flex">
-          <div className="w-14 border-r border-p4   pt-5">
+        <div className="flex">
+          <div className="min-w-[4rem] border-r border-p4   pt-5">
             <div className=" text-2xl flex flex-col items-center gap-5 text-s1">
               <AboutMainMenuActive to={"/about/professional-info"}>
                 <HiTerminal />
@@ -20,12 +20,12 @@ const About = () => {
               </AboutMainMenuActive>
             </div>
           </div>
-          <div className="w-full flex">
+          <div className=" flex">
             <Outlet />
           </div>
         </div>
       </div>
-      <div className="col-span-5 border-p4 w-full h-full text-s1"></div>
+      <div className="col-span-5 border-p4 w-full h-full text-s1">erer</div>
     </div>
   );
 };
