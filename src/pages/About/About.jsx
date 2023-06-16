@@ -2,6 +2,7 @@ import { HiTerminal } from "react-icons/hi";
 import { RiGamepadFill, RiInformationFill } from "react-icons/ri";
 import { Outlet } from "react-router-dom";
 import AboutMainMenuActive from "../../components/ActiveLink/AboutMainMenuActive";
+import SnakeGame from "../../components/SnakeGame/SnakeGame";
 const About = () => {
   return (
     <div className="grid grid-cols-12 h-full w-full">
@@ -25,7 +26,9 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="col-span-5 border-p4 w-full h-full text-s1">erer</div>
+      <div className="col-span-5 border-p4 w-full h-full text-s1">
+        <SnakeGame />
+      </div>
     </div>
   );
 };

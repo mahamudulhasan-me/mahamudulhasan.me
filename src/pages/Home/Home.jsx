@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import SnakeGame from "../../components/SnakeGame/SnakeGame";
 
 const Home = () => {
   return (
@@ -30,17 +31,17 @@ const Home = () => {
       </div>
       <div className="relative h-full flex justify-start items-center">
         <div
-          className="rounded-lg border-2 border-[#010e0e] flex justify-center items-center"
+          className="game rounded-lg border-2 border-[#010e0e] flex justify-center items-center"
           style={{
             width: "475px",
             height: "475px",
             background:
               "linear-gradient(150.26deg, rgba(23, 85, 83, 0.7) 1.7%, rgba(67, 217, 173, 0.091) 81.82%)",
             boxShadow: "inset 0px 2px 0px rgba(255, 255, 255, 0.3)",
-            backdropFilter: "blur(32px)",
+            // backdropFilter: "blur(32px)",
           }}
         >
-          <h1 className="text-white text-3xl">Snake Game coming soooon!</h1>
+          <SnakeGame />{" "}
         </div>
         <div className="absolute w-96 h-80 bg-a2 top-[20%] left-[10%] opacity-40 rotate-[20deg] blur-[87px] "></div>
         <div className="absolute bg-a2 w-40 rounded-3xl h-64 top-5 -left-5 rotate-[-35deg] opacity-40 blur-[87px] "></div>

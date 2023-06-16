@@ -3,6 +3,7 @@ import Main from "../layouts/Main";
 import About from "../pages/About/About";
 import PersonalInfo from "../pages/About/PersonalInfo/PersonalInfo";
 import ProfessionalInfo from "../pages/About/ProfessionalInfo/ProfessionalInfo";
+import Contact from "../pages/Contact/Contact";
 import Home from "../pages/Home/Home";
 import Projects from "../pages/Projects/Projects";
 
@@ -32,6 +33,10 @@ const provider = createBrowserRouter([
       {
         path: "/projects",
         element: <Projects />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
     ],
   },

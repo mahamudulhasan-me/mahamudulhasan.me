@@ -18,7 +18,7 @@ const Navbar = () => {
         </ul>
         <ul className="h-full">
           <li className="w-[153px] border-l border-p4 h-full flex justify-center items-center hover:text-white transition-all">
-            <ActiveNav to={"/projects"}>_contact-me</ActiveNav>
+            <ActiveNav to={"/contact"}>_contact-me</ActiveNav>
           </li>
         </ul>
       </nav>
