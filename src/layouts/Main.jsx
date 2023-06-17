@@ -9,9 +9,9 @@ const Main = () => {
     Aos.init();
   }, []);
   return (
-    <div className="max-h-[calc(100vh-2px)]">
+    <div className="min-h-[calc(100vh-2px)]">
       <Navbar />
-      <div className="h-[calc(100vh-6.6rem)]">
+      <div className="h-[calc(100vh-4rem)]">
         <Outlet />
       </div>
       <Footer />

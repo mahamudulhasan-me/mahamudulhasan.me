@@ -74,14 +74,17 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-5 flex justify-center items-center">
-          <SyntaxHighlighter
-            language="javascript"
-            showLineNumbers
-            customStyle={customTheme}
-            style={gradientDark}
-          >
-            {`const button = document.querySelector('#sendBtn');
+        <div className="col-span-5 ">
+          <div className={`border-b  border-p4 w-full h-10`}></div>
+          <div className="w-full h-full pr-6 ">
+            <div className=" flex w-full h-[calc(100%-40px)] justify-center items-center border-r border-p4">
+              <SyntaxHighlighter
+                language="javascript"
+                showLineNumbers
+                customStyle={customTheme}
+                style={gradientDark}
+              >
+                {`const button = document.querySelector('#sendBtn');
 
 const message = {
 	name: ${name ? name : '""'},
@@ -93,7 +96,9 @@ const message = {
 button.addEventListener('click', () => {
 	form.send(message);
 })`}
-          </SyntaxHighlighter>
+              </SyntaxHighlighter>
+            </div>
+          </div>
         </div>
       </div>
     </>

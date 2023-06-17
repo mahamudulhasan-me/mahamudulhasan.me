@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet";
 import { HiTerminal } from "react-icons/hi";
 import { RiGamepadFill, RiInformationFill } from "react-icons/ri";
 import { Outlet } from "react-router-dom";
+import AboutCodeSnippet from "../../components/AboutCodeSnippet/AboutCodeSnippet";
 import AboutMainMenuActive from "../../components/ActiveLink/AboutMainMenuActive";
 const About = () => {
   return (
@@ -9,10 +10,10 @@ const About = () => {
       <Helmet>
         <title>About | Mahamudul Hasan</title>
       </Helmet>
-      <div className="grid grid-cols-12 h-full w-full">
-        <div className="col-span-8 border-r border-p4 w-full h-full">
-          <div className="flex ">
-            <div className="min-w-[4rem] border-r border-p4   pt-5">
+      <div className="grid grid-cols-12  w-full">
+        <div className="col-span-7 border-r border-p4 w-full h-full">
+          <div className="flex h-full ">
+            <div className="min-w-[4rem]  border-r border-p4   pt-5">
               <div className=" text-2xl flex flex-col items-center gap-5 text-s1">
                 <AboutMainMenuActive to={"/about/professional-info"}>
                   <HiTerminal />
@@ -25,13 +26,33 @@ const About = () => {
                 </AboutMainMenuActive>
               </div>
             </div>
-            <div className=" flex">
+            <div className="flex w-full">
               <Outlet />
             </div>
           </div>
         </div>
-        <div className="col-span-4 border-p4 h-full text-s1  mr-6 border-r">
-          rer
+        <div className="col-span-5 ">
+          <div className={`border-b  border-p4 w-full h-10`}></div>
+          <div className="w-full h-full pr-6 ">
+            <div className="  w-full h-[calc(100%-40px)] px-5 py-3 border-r border-p4">
+              <span className="text-s1 text-2xl">{`// Code snippet showcase:`}</span>
+              <div className="mt-10 mb-5 space-y-8">
+                <AboutCodeSnippet>{`function initializeModelChunk(chunk) {
+  const value = parseModel(chunk._response, chunk._value);
+  const initializedChunk = chunk;
+  initializedChunk._status = INITIALIZED;
+  initializedChunk._value = value;
+  return value;
+}
+`}</AboutCodeSnippet>
+                <AboutCodeSnippet>{`export function parseModelTuple(
+  response: Response,
+  value: {+[key: string]: JSONValue} | $ReadOnlyArray<JSONValue>,
+): any {
+  const tuple: [mixed, mixed, mixed, mixed] = (value: any);`}</AboutCodeSnippet>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

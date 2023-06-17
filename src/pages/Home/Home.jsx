@@ -40,7 +40,7 @@ const Home = () => {
       <Helmet>
         <title>Home | Mahamudul Hasan</title>
       </Helmet>
-      <div className="w-4/5  mx-auto flex justify-center items-center h-full gap-10">
+      <div className="w-4/5 mx-auto flex justify-center items-center h-[calc(100vh-6rem)] gap-10">
         <div className="">
           <div className="text-[#E5E9F0]">
             <p className="text-lg ">Hi all. I am</p>

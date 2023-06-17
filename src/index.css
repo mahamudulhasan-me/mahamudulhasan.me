@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 body {
-  @apply max-w-[1782px] mx-auto font-fira bg-p2 rounded-lg border border-p4;
+  @apply max-w-[1782px] mx-auto font-fira bg-p2 rounded-lg border-x border-t border-p4;
 }
 
 .menu_nav-items {

@@ -2,7 +2,7 @@ import { RiFacebookFill, RiGithubFill, RiLinkedinFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <footer className="bottom-0 left-0 right-0 h-12 border-t border-p4 px-6 flex justify-between items-center text-s1 text-lg">
+    <footer className="fixed bottom-0 left-0 right-0 h-12 border-y bg-p2 border-p4 px-6 flex justify-between items-center text-s1 text-lg">
       <div className="border-r border-p4 h-full flex justify-start items-center transition-all">
         find me in:
         <Link
