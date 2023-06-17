@@ -50,7 +50,7 @@ const Projects = () => {
         <title>Projects | Mahamudul Hasan</title>
       </Helmet>
       <div className="h-full w-full text-s1 flex">
-        <div className="w-[19.43rem] h-full border-r border-p4 ">
+        <div className="min-w-[21%] h-full border-r border-p4 ">
           <div
             data-aos="fade-down"
             onClick={() => setShowInfo(!showInfo)}

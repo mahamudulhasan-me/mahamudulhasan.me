@@ -3,7 +3,7 @@ import ActiveNav from "../../../components/ActiveLink/ActiveNav";
 const Navbar = () => {
   return (
     <div className="text-s1 text-lg h-14 bg-p2 flex justify-between items-center border-b border-p4">
-      <div className="w-[19.2rem] pl-6">_mahamudul-hasan</div>
+      <div className="w-[21%] pl-6">_mahamudul-hasan</div>
       <nav className="w-[calc(100vw-19.4rem)] mx-auto border-x border-p4 h-full flex justify-between items-center">
         <ul className="menu_nav-items">
           <li>

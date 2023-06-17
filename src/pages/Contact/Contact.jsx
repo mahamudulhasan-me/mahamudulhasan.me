@@ -20,9 +20,9 @@ const Contact = () => {
       <Helmet>
         <title>Contact | Mahamudul Hasan</title>
       </Helmet>
-      <div className="grid grid-cols-12  h-full">
+      <div className="grid grid-cols-12 min-h-[calc(100vh-6.5rem)]">
         <div className="col-span-7  border-r border-p4 h-full flex justify-start text-s1">
-          <div className="w-[19.3rem] h-full border-r border-p4 ">
+          <div className="min-w-[36%] h-full border-r border-p4 ">
             <ContactNumber />
             {/* find me compo */}
             <FindMe />

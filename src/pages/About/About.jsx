@@ -13,7 +13,7 @@ const About = () => {
       <div className="grid grid-cols-12  w-full">
         <div className="col-span-7 border-r border-p4 w-full h-full">
           <div className="flex h-full ">
-            <div className="min-w-[4rem]  border-r border-p4   pt-5">
+            <div className="min-w-[7%]  border-r border-p4   pt-5">
               <div className=" text-2xl flex flex-col items-center gap-5 text-s1">
                 <AboutMainMenuActive to={"/about/professional-info"}>
                   <HiTerminal />
@@ -26,7 +26,7 @@ const About = () => {
                 </AboutMainMenuActive>
               </div>
             </div>
-            <div className="flex w-full">
+            <div className="flex min-w-[93%]">
               <Outlet />
             </div>
           </div>

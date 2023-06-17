@@ -44,7 +44,7 @@ const ProfessionalInfo = () => {
   };
   return (
     <>
-      <div className="w-[15.4rem] border-r border-p4 h-full flex justify-start text-s1">
+      <div className="min-w-[31%] border-r border-p4 h-full flex justify-start text-s1">
         <div className="w-full">
           <div
             data-aos="fade-down"

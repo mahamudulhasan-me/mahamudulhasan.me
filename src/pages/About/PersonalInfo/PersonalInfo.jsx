@@ -41,7 +41,7 @@ const PersonalInfo = () => {
   };
   return (
     <>
-      <div className="w-[15.3rem] border-r border-p4 h-full flex justify-start text-s1">
+      <div className="min-w-[31%] border-r border-p4 h-full flex justify-start text-s1">
         <div className="w-full">
           <div>
             <div
