@@ -26,3 +26,6 @@ body {
 .contact-form textarea:focus {
   box-shadow: 0px 0px 0px 2px rgba(96, 123, 150, 0.3);
 }
+.arrow-btn {
+  @apply w-12 h-8 bg-p1 rounded-lg mx-auto text-white flex justify-center items-center;
+}

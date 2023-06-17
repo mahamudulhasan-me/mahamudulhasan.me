@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import appleSound from "./appleSound.mp3";
-import gameOverSound from "./gameOverSound.mp3";
+import appleSound from "../../assets/audio/eating.mp3";
+import gameOverSound from "../../assets/audio/gameover.mp3";
 
 const GRID_SIZE = 13;
 const CELL_SIZE = 19;
@@ -12,11 +12,14 @@ const INITIAL_SNAKE = [
 const INITIAL_DIRECTION = "up";
 const INITIAL_APPLE = { x: 5, y: 6 };
 
-const SnakeGame = () => {
+const SnakeGame = ({ isGameOver, setEatenApples, eatenApples }) => {
   const [snake, setSnake] = useState(INITIAL_SNAKE);
   const [direction, setDirection] = useState(INITIAL_DIRECTION);
   const [apple, setApple] = useState(INITIAL_APPLE);
   const [gameOver, setGameOver] = useState(false);
+  const [isGameOverSoundPlayed, setIsGameOverSoundPlayed] = useState(false);
+
+  isGameOver(gameOver);
 
   useEffect(() => {
     const interval = setInterval(moveSnake, 150);
@@ -27,6 +30,13 @@ const SnakeGame = () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, [snake, direction, apple]);
+
+  useEffect(() => {
+    if (gameOver && !isGameOverSoundPlayed) {
+      playSound(gameOverSound);
+      setIsGameOverSoundPlayed(true);
+    }
+  }, [gameOver, isGameOverSoundPlayed]);
 
   const handleKeyDown = (event) => {
     const key = event.key.toLowerCase();
@@ -60,14 +70,15 @@ const SnakeGame = () => {
     }
 
     const newSnake = [head, ...snake];
+
     if (isSnakeCollision(newSnake) || isBoundaryCollision(head)) {
       setGameOver(true);
-      playSound(gameOverSound);
       return;
     }
 
     if (head.x === apple.x && head.y === apple.y) {
       setApple(getRandomApplePosition(newSnake));
+      setEatenApples(eatenApples - 1);
       playSound(appleSound);
     } else {
       newSnake.pop();
@@ -99,6 +110,7 @@ const SnakeGame = () => {
     const y = Math.floor(randomCell / GRID_SIZE);
     return { x, y };
   };
+
   const renderCell = (row, col) => {
     const isSnake = snake.some((part) => part.x === col && part.y === row);
     const isApple = apple.x === col && apple.y === row;
@@ -200,10 +212,11 @@ const SnakeGame = () => {
   return (
     <div className="">
       {gameOver ? (
-        <div>
-          <button className="absolute text-red-500 z-50 bg-yellow-50 top-1/2 right-1/2">
-            Game Over!
-          </button>
+        <div
+          style={{ background: "rgba(1, 22, 39, 0.84)" }}
+          className="absolute left-9 right-[13.2rem] bottom-36 text-center text-a2 text-2xl uppercase py-2"
+        >
+          Game Over!
         </div>
       ) : (
         <div
