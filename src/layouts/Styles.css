@@ -1,0 +1,17 @@
+.content-container {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.content-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.content-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.content-container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}

@@ -12,54 +12,58 @@ import reactRouter from "../../../../assets/images/skills/react-router.256x140.p
 const OtherSkills = () => {
   return (
     // other skill scetion
-    <div className="p-10">
+    <div className="px-10 ">
       {/* git and github  */}
-      <h2 className="text-2xl text-s3 mb-5 underline decoration-dashed flex items-center">
+      <h2 className="text-2xl  mb-5  flex items-center">
         <FaGitAlt /> _git
       </h2>
       <div className="flex gap-10">
         <figure className="text-center">
-          <img src={git} alt="" className="w-16" />
-          <p className="text-lg">git</p>
+          <img src={git} alt="git" className="w-16" />
+          <p>git</p>
         </figure>
         <figure className="text-center">
-          <img src={github} alt="" className="w-16" />
-          <p className="text-lg">github</p>
+          <img src={github} alt="github" className="w-16" />
+          <p>github</p>
         </figure>
       </div>
 
-      <h2 className="text-s3 text-2xl mt-5 mb-3 underline decoration-dashed flex items-center">
+      <h2 className=" text-2xl  mb-4  flex items-center mt-10">
         <RiToolsFill /> _different tools
       </h2>
-      <div className="flex gap-10 items-center">
+      <div className="flex  items-center justify-between">
         <figure>
-          <img src={reactRouter} alt="" className="w-28" />
-          <p className="text-lg">React-router</p>
+          <img src={reactRouter} alt="react-router" className="w-28" />
+          <p>react-router</p>
         </figure>
         <figure className="text-center">
-          <img src={axios} alt="" className="w-16" />
-          <p className="text-lg">Axios</p>
+          <img src={axios} alt="axios" className="w-16" />
+          <p>axios</p>
         </figure>
         <figure className="text-center">
-          <img src={reactQuery} alt="" className="w-16" />
-          <p className="text-lg">React-query</p>
+          <img
+            src={reactQuery}
+            alt="react-query/tanStack-Query"
+            className="w-16"
+          />
+          <p>react-query</p>
         </figure>
         <figure className="text-center">
-          <img src={figma} alt="" className="w-16" />
-          <p className="text-lg">Figma</p>
+          <img src={figma} alt="figma" className="w-16" />
+          <p>figma</p>
         </figure>
       </div>
-      <h2 className="text-s3 text-2xl mt-5 mb-3 underline decoration-dashed flex items-center">
+      <h2 className="text-2xl mt-10 mb-4  flex items-center">
         <FaPython /> _other language
       </h2>
       <div className="flex gap-10 items-center">
         <figure>
-          <img src={python} alt="" className="w-16" />
-          <p className="text-lg">Python</p>
+          <img src={python} alt="python" className="w-16" />
+          <p>Python</p>
         </figure>
         <figure className="text-center">
-          <img src={django} alt="" className="w-16" />
-          <p className="text-lg">Django</p>
+          <img src={django} alt="django" className="w-16" />
+          <p>Django</p>
         </figure>
       </div>
     </div>
