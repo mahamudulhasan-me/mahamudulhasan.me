@@ -4,8 +4,8 @@ import {
   RiArrowRightSFill,
   RiCloseFill,
 } from "react-icons/ri";
-import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight";
-import { atelierLakesideDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import Sticky from "react-stickynode";
+import CommentSyntaxHighlighter from "../../../components/AboutCodeSnippet/CommentSyntaxHighlighter";
 import NavBio from "../../../components/AboutInfoNav/NavBio";
 import NavContact from "../../../components/AboutInfoNav/NavContact";
 import NavEducation from "../../../components/AboutInfoNav/NavEducation";
@@ -14,38 +14,50 @@ import Institute from "./Education/Institute";
 import University from "./Education/University";
 const PersonalInfo = () => {
   const [showInfo, setShowInfo] = useState(true);
-  const [selectedMenu, setSelectedMenu] = useState("about-me");
+  const [selectedMenu, setSelectedMenu] = useState("bio");
 
-  const code = `
-  /**
-    * About me
-    * I have 5 years of еxperience in web
-    * development lorem ipsum dolor sit amet, 
-    * consectetur adipiscing elit, sed do eiusmod
-    * tempor incididunt ut labore et dolore
-    * magna aliqua. Ut enim ad minim veniam,
-    * quis nostrud exercitation ullamco laboris
-   * nisi ut aliquip ex ea commodo consequat.
-   * Duis aute irure dolor in reprehenderit in
-   *
-   * Duis aute irure dolor in reprehenderit in
-   * voluptate velit esse cillum dolore eu fugiat 
-   * nulla pariatur. Excepteur sint occaecat 
-   * officia deserunt mollit anim id est laborum.
+  const bio = ` /**
+  * I'm an accomplished MERN stack developer
+  * with a proven track record of creating
+  * exceptional web applications. With 
+  * expertise in React, Node.js, and Express.js,
+  * 
+  * I bring a unique blend of technical
+  * skills and a keen eye for detail to
+  * every project. With 1 year of industry
+ * experience, I have successfully delivered
+ * cutting-edge solutions that exceed client
+ * expectations. Continuously staying abreast
+ * of the latest trends and technologies,
+ * 
+ * I thrive on solving challenges and
+ * creating seamless user experiences.
+ * Collaborate with me to bring your vision
+ * to life and achieve extraordinary results."
  */
   `;
-
-  const customTheme = {
-    background: "transparent",
-    fontSize: "18px",
-  };
+  const interested = `/**
+  * As a web developer,
+  * I have a keen interest in emerging
+  * technologies and innovative web 
+  * solutions. 
+  * I'm passionate about creating seamless
+  * user experiences and leveraging the 
+  * power of web development to bring 
+  * ideas to life. Constantly learning
+  * and exploring new trends, I thrive
+  * on the dynamic nature of the web 
+  * development industry. Let's collaborate
+  * and build extraordinary digital
+  * experiences together.
+  */`;
   return (
     <>
       <div className="min-w-[31%] border-r border-p4 h-full flex justify-start text-s1">
         <div className="w-full">
-          <div>
+          <Sticky enabled top={56}>
             <div
-              data-aos="fade-down"
+              data-aos="fade-right"
               onClick={() => setShowInfo(!showInfo)}
               className={`${
                 showInfo ? "text-white" : ""
@@ -60,45 +72,46 @@ const PersonalInfo = () => {
             </div>
 
             {showInfo ? (
-              <div data-aos="zoom-in" className={`px-3 mt-4 space-y-4 `}>
-                <NavBio />
+              <div data-aos="zoom-in" className={`pl-10 mt-4 space-y-4 `}>
+                <NavBio
+                  setSelectedMenu={setSelectedMenu}
+                  selectedMenu={selectedMenu}
+                />
                 {/* interested nav  */}
-                <NavInterested />
-                <div>
-                  {/* education  */}
-                  <NavEducation selectedStatus={setSelectedMenu} />
-                </div>
+                <NavInterested
+                  setSelectedMenu={setSelectedMenu}
+                  selectedMenu={selectedMenu}
+                />
+                {/* education  */}
+                <NavEducation selectedStatus={setSelectedMenu} />
               </div>
             ) : (
               ""
             )}
-          </div>
-          <NavContact />
+
+            <NavContact />
+          </Sticky>
         </div>
       </div>
-      <div className="text-s1">
-        <div className={`border-b  border-p4 w-full h-10`}>
-          <span className="border-r border-p4  h-full flex gap-1 items-center px-3 cursor-pointer w-1/3">
-            Personal Info <RiCloseFill size={20} />
-          </span>
-        </div>
-        <div className="px-3">
-          {selectedMenu === "about-me" && (
-            <article className="bg-inherit">
-              <SyntaxHighlighter
-                language="javascript"
-                style={atelierLakesideDark}
-                customStyle={customTheme}
-                showLineNumbers
-              >
-                {code}
-              </SyntaxHighlighter>
-            </article>
-          )}
+      <div className="text-s1 w-[calc(100%-15rem)]">
+        <Sticky enabled top={56}>
+          <div className={`border-b bg-p2  border-p4 w-full h-10 z-40`}>
+            <span className="border-r bg-p2 border-p4  h-full flex gap-1 items-center px-3 cursor-pointer w-fit">
+              Personal Info <RiCloseFill size={20} />
+            </span>
+          </div>
 
-          {selectedMenu === "institute" && <Institute />}
-          {selectedMenu === "university" && <University />}
-        </div>
+          <div className="px-3 my-5">
+            {selectedMenu === "bio" && (
+              <CommentSyntaxHighlighter>{bio}</CommentSyntaxHighlighter>
+            )}
+            {selectedMenu === "interested" && (
+              <CommentSyntaxHighlighter>{interested}</CommentSyntaxHighlighter>
+            )}
+            {selectedMenu === "institute" && <Institute />}
+            {selectedMenu === "university" && <University />}
+          </div>
+        </Sticky>
       </div>
     </>
   );

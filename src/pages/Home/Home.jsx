@@ -79,7 +79,7 @@ const Home = () => {
                 <span className="text-a3">
                   “
                   <Link className="underline ">
-                    https://github.com/example/url
+                    https://docs.google.com/resume/download
                   </Link>
                   ”
                 </span>

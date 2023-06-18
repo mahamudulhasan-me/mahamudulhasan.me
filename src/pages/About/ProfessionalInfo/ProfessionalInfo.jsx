@@ -28,6 +28,7 @@ const ProfessionalInfo = () => {
   * seamless user experiences. From front-end
   * magic with React to robust server-side
   * solutions with Node.js and Express.js,
+ * 
  * I bring your ideas to life with pixel-
  * perfect precision. I thrive on challenges,
  * possess a meticulous eye for detail,
@@ -46,6 +47,7 @@ const ProfessionalInfo = () => {
     <>
       <div className="min-w-[31%]  border-r border-p4 h-full flex justify-start text-s1">
         <div className="w-full">
+          {/* professional 2nd nav var with sticky  */}
           <Sticky enabled top={56}>
             <div
               data-aos="fade-down"
@@ -72,15 +74,14 @@ const ProfessionalInfo = () => {
             ) : (
               ""
             )}
-
             <NavContact />
           </Sticky>
         </div>
       </div>
       <div className=" text-s1 w-[calc(100%-15rem)]">
-        <Sticky enabled top={56} innerClass="w-full">
-          <div className={`border-b  border-p4 w-full h-10`}>
-            <span className="border-r border-p4  h-full flex gap-1 items-center px-3 cursor-pointer w-2/5">
+        <Sticky enabled top={56}>
+          <div className={`border-b bg-p2 border-p4 w-full h-10`}>
+            <span className="border-r border-p4  h-full flex gap-1 items-center px-3 cursor-pointer w-fit">
               professional-info <RiCloseFill size={20} />
             </span>
           </div>

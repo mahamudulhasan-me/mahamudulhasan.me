@@ -1,15 +1,19 @@
-import { RiArrowRightSLine, RiFolder3Fill } from "react-icons/ri";
+import { RiFolder3Fill } from "react-icons/ri";
 
-const NavBio = () => {
+const NavBio = ({ setSelectedMenu, selectedMenu }) => {
+  // const [select, setSelect]
   return (
-    <>
-      <div>
-        <div className="flex items-center gap-1">
-          <RiArrowRightSLine size={24} />{" "}
-          <RiFolder3Fill size={24} color="#E99287" /> bio
-        </div>
-      </div>
-    </>
+    <div
+      onClick={() => {
+        setSelectedMenu("bio");
+      }}
+      className="flex items-center gap-1 cursor-pointer"
+    >
+      <RiFolder3Fill size={24} color="#E99287" />{" "}
+      <span className={`${selectedMenu === "bio" ? "text-white" : "text-s1"}`}>
+        bio
+      </span>
+    </div>
   );
 };
 
