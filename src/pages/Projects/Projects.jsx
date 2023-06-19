@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { BsFillBootstrapFill } from "react-icons/bs";
 import {
@@ -12,11 +12,46 @@ import {
   RiStackFill,
 } from "react-icons/ri";
 import { SiTailwindcss } from "react-icons/si";
-import react from "../../assets/images/skills/physics.png";
+
+import Project from "./Project";
 
 const Projects = () => {
   const [showInfo, setShowInfo] = useState(true);
+  const [projects, setProjects] = useState([]);
   const [selectedCategories, setSelectedCategories] = useState([]);
+  const [filteredProjects, setFilteredProjects] = useState([]);
+
+  useEffect(() => {
+    fetchProjects();
+  }, []);
+
+  useEffect(() => {
+    filterProjects();
+  }, [selectedCategories]);
+
+  const fetchProjects = async () => {
+    try {
+      const response = await fetch("./projectsData.json");
+      const data = await response.json();
+      setProjects(data);
+      setFilteredProjects(data);
+    } catch (error) {
+      console.error("Error fetching project data:", error);
+    }
+  };
+
+  const filterProjects = () => {
+    if (selectedCategories.length > 0) {
+      const filtered = projects.filter((project) =>
+        project.category.some((category) =>
+          selectedCategories.includes(category)
+        )
+      );
+      setFilteredProjects(filtered);
+    } else {
+      setFilteredProjects(projects);
+    }
+  };
 
   const handleCheckboxChange = (event) => {
     const { value, checked } = event.target;
@@ -28,22 +63,7 @@ const Projects = () => {
       }
     });
   };
-  console.log(selectedCategories);
-  // useEffect(() => {
-  //   selectedCategories.forEach((category) => {
-  //     // Perform API call for each selected category
-  //     fetch(`https://api.example.com/projects?category=${category}`)
-  //       .then((response) => response.json())
-  //       .then((data) => {
-  //         // Process the API response data for each category
-  //         console.log(data);
-  //       })
-  //       .catch((error) => {
-  //         // Handle any errors
-  //         console.error(error);
-  //       });
-  //   });
-  // }, [selectedCategories]);
+
   return (
     <>
       <Helmet>
@@ -74,6 +94,7 @@ const Projects = () => {
                 <input
                   type="checkbox"
                   onChange={handleCheckboxChange}
+                  checked={selectedCategories.includes("html")}
                   value="html"
                 />
                 <RiHtml5Fill size={28} /> <label htmlFor="html">HTML</label>
@@ -82,6 +103,7 @@ const Projects = () => {
                 <input
                   type="checkbox"
                   onChange={handleCheckboxChange}
+                  checked={selectedCategories.includes("css")}
                   value="css"
                 />
                 <RiCss3Fill size={28} /> <label htmlFor="css">CSS</label>
@@ -134,34 +156,11 @@ const Projects = () => {
               <RiCloseFill size={20} />
             </span>
           </div>
-          <div className="border-r border-p4  mr-6 h-[calc(100%-40px)]">
-            <div className="pt-20 pl-10  grid grid-cols-3">
-              <div className="w-[23rem]">
-                <p>
-                  <span className="font-semibold text-s3">Project 1</span>{" "}
-                  <span>//_ui-animation</span>
-                </p>
-                <div className="relative rounded-2xl border border-p4">
-                  <img
-                    src={react}
-                    alt=""
-                    className="absolute w-10 right-4 top-4"
-                  />
-                  <img
-                    src=""
-                    alt=""
-                    className="w-full h-36 rounded-t-2xl border-b border-p4"
-                  />
-                  <div className="mx-8">
-                    <p className="text-lg my-6  ">
-                      Duis aute irure dolor in velit esse cillum dolore.
-                    </p>
-                    <button className="bg-[#1C2B3A] hover:bg-[#263B50] text-white px-4 py-3 rounded-lg mb-8 transition-all">
-                      view-project
-                    </button>
-                  </div>
-                </div>
-              </div>
+          <div className="border-r border-p4  mr-6 min-h-[calc(100%-40px)]">
+            <div className="pt-20 px-10  grid grid-cols-3 gap-5">
+              {filteredProjects.reverse().map((project) => (
+                <Project key={project._id} project={project} />
+              ))}
             </div>
           </div>
         </div>
