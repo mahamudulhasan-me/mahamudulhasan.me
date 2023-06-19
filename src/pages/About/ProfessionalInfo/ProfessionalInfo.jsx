@@ -37,25 +37,34 @@ const ProfessionalInfo = () => {
  * Let's collaborate and create something
  * extraordinary together!"
  */`;
+  const codeResponsive = `/**
+* About me
+* I'm a passionate MERN stack
+* developer with 1 year of
+* experience. I specialize
+* in crafting top-notch web 
+* applications that blend 
+* cutting-edge technology 
+* with seamless user experiences.
+* From front-end magic with
+* React to robust server-side
+* solutions with Node.js and 
+* Express.js,
 
-  const codeResponsive = ` /**
- * About me
- * I'm a passionate MERN stack developer
- * with 1 year of experience. I specialize
- * in crafting top-notch web applications
- * that blend cutting-edge technology with
- * seamless user experiences. From front-end
- * magic with React to robust server-side
- * solutions with Node.js and Express.js,
-* 
-* I bring your ideas to life with pixel-
-* perfect precision. I thrive on challenges,
-* possess a meticulous eye for detail,
-* and constantly stay ahead of the curve
-* in the ever-evolving tech landscape.
-* Let's collaborate and create something
-* extraordinary together!"
+* I bring your ideas to life
+* with pixel-magic with
+* perfect precision. I 
+* thrive on challenges,
+* possess a meticulous eye
+* for detail, and constantly
+* stay ahead of the curve
+* in the ever-evolving tech
+* landscape.
+*
+* Let's collaborate and create
+* something extraordinary together!"
 */`;
+
   const customTheme = {
     background: "transparent",
     fontSize: "18px",
@@ -89,7 +98,7 @@ const ProfessionalInfo = () => {
             {showInfo ? (
               <div
                 data-aos="zoom-in"
-                className={`px-3 mt-4 h-fit space-y-4 z-20`}
+                className={`px-3 mt-4 h-full   border-p4 space-y-4 z-20 border-l `}
               >
                 {/* skill nav  */}
                 <NavSkills selectedStatus={setSelectedMenu} />
@@ -103,7 +112,7 @@ const ProfessionalInfo = () => {
           </Sticky>
         </div>
       </div>
-      <div className=" text-s1 lg:w-[calc(100%-15rem)]">
+      <div className=" text-s1 mg:w-[calc(100%-15rem)]">
         <Sticky
           enabled
           top={56}
@@ -114,17 +123,29 @@ const ProfessionalInfo = () => {
               professional-info <RiCloseFill size={20} />
             </span>
           </div>
-          <div className="mg:px-3 mt-5 w-4/5">
+          <div className="md:px-3 mt-5 lg:w-4/5  h-full">
             {selectedMenu === "about-me" && (
-              <article hidden>
-                <SyntaxHighlighter
-                  language="javascript"
-                  style={atelierLakesideDark}
-                  customStyle={customTheme}
-                  showLineNumbers
-                >
-                  {code}
-                </SyntaxHighlighter>
+              <article>
+                <span className="hidden md:block">
+                  <SyntaxHighlighter
+                    language="javascript"
+                    style={atelierLakesideDark}
+                    customStyle={customTheme}
+                    showLineNumbers
+                  >
+                    {code}
+                  </SyntaxHighlighter>
+                </span>
+                <span className="lg:hidden w-full">
+                  <SyntaxHighlighter
+                    language="javascript"
+                    style={atelierLakesideDark}
+                    customStyle={customTheme}
+                    showLineNumbers
+                  >
+                    {codeResponsive}
+                  </SyntaxHighlighter>
+                </span>
               </article>
             )}
             {selectedMenu === "front-end" && <FrontEnd />}

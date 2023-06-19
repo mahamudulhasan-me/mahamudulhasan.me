@@ -23,7 +23,7 @@ const NavContact = () => {
         <div
           data-aos="fade-down"
           onClick={() => setShowInfo(!showInfo)}
-          className="border-y mt-3 border-p4 w-full h-10 flex gap-1 items-center px-3 cursor-pointer"
+          className="border lg:border-y mt-3 border-p4 w-full h-10 flex gap-1 items-center px-3 cursor-pointer"
         >
           {showInfo ? (
             <RiArrowDownSFill size={24} />
@@ -34,7 +34,10 @@ const NavContact = () => {
         </div>
 
         {showInfo ? (
-          <div data-aos="zoom-in" className={`px-3 mt-4 space-y-4 `}>
+          <div
+            data-aos="zoom-in"
+            className={`border-l md:border-l-0 border-p4 px-3 mt-4 space-y-4 `}
+          >
             <p className="flex items-center gap-2 ">
               <RiMailFill size={20} />{" "}
               <span
