@@ -45,10 +45,14 @@ const ProfessionalInfo = () => {
   };
   return (
     <>
-      <div className="min-w-[31%]  border-r border-p4 h-full flex justify-start text-s1">
+      <div className="lg:min-w-[31%]  border-r border-p4 h-full flex flex-col justify-start text-s1">
         <div className="w-full">
           {/* professional 2nd nav var with sticky  */}
-          <Sticky enabled top={56}>
+          <Sticky
+            enabled
+            top={56}
+            innerActiveClass="max-lg:!static max-lg:!transform-none max-lg:!w-auto"
+          >
             <div
               data-aos="fade-down"
               onClick={() => setShowInfo(!showInfo)}
@@ -78,8 +82,12 @@ const ProfessionalInfo = () => {
           </Sticky>
         </div>
       </div>
-      <div className=" text-s1 w-[calc(100%-15rem)]">
-        <Sticky enabled top={56}>
+      <div className=" text-s1 lg:w-[calc(100%-15rem)]">
+        <Sticky
+          enabled
+          top={56}
+          innerActiveClass="max-lg:!static max-lg:!transform-none max-lg:!w-auto"
+        >
           <div className={`border-b bg-p2 border-p4 w-full h-10`}>
             <span className="border-r border-p4  h-full flex gap-1 items-center px-3 cursor-pointer w-fit">
               professional-info <RiCloseFill size={20} />

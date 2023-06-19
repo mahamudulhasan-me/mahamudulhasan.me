@@ -12,11 +12,16 @@ const About = () => {
       <Helmet>
         <title>About | Mahamudul Hasan</title>
       </Helmet>
-      <div className="grid grid-cols-12  w-full">
+      <div></div>
+      <div className="md:grid grid-cols-12  w-full hidden">
         <div className="col-span-7 border-r border-p4 w-full h-full">
-          <div className="flex h-full">
+          <div className="flex lg:h-full">
             <div className="min-w-[7%] border-r border-p4 pt-5  ">
-              <Sticky enabled={true} top={80}>
+              <Sticky
+                enabled={true}
+                top={80}
+                innerActiveClass="max-lg:!static max-lg:!transform-none max-lg:!w-auto"
+              >
                 <div className="text-2xl flex flex-col items-center gap-5 text-s1">
                   <AboutMainMenuActive to={"/about/professional-info"}>
                     <HiTerminal />

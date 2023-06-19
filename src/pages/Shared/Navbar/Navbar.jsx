@@ -23,7 +23,7 @@ const Navbar = () => {
       {/* responsive menu  */}
       <div className="lg:w-[21%] w-full lg:pl-6 lg:px-0 px-10 flex justify-between items-center">
         <span>_mahamudul-hasan</span>
-        <span className="lg:hidden">
+        <span className="lg:hidden cursor-pointer">
           {isMenuOpen ? (
             <RiCloseFill onClick={() => setIsMenuOpen(!isMenuOpen)} size={36} />
           ) : (
@@ -42,7 +42,10 @@ const Navbar = () => {
             <Link to={"/"} onClick={() => setIsMenuOpen(!isMenuOpen)}>
               <li>_home</li>
             </Link>
-            <Link to={"/"} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <Link
+              to={"/about/professional-info"}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
               <li>_about-me</li>
             </Link>
             <Link to={"/projects"} onClick={() => setIsMenuOpen(!isMenuOpen)}>

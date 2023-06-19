@@ -28,15 +28,15 @@ const ModalProject = ({ isOpen, closeModal, content }) => {
       data-aos="zoom-out"
       className="fixed top-0 left-0 w-full h-full z-50 flex justify-center items-center bg-p2 bg-opacity-70"
     >
-      <div className=" bg-opacity-70 w-1/2 relative py-10 rounded-xl">
+      <div className=" bg-opacity-70 md:w-1/2 relative py-10 rounded-xl">
         <span
-          className="text-red-700 top-10 right-10 absolute cursor-pointer"
+          className="text-red-700 lg:top-10 top-5 right-10 absolute cursor-pointer z-50"
           onClick={closeModal}
         >
           <RiCloseLine size={40} />
         </span>
 
-        <div data-aos="zoom-in" className="w-3/4 mx-auto">
+        <div data-aos="zoom-in" className="md:w-3/4 mx-auto">
           <p className="text-lg">
             <span className="font-semibold text-s3">{projectNo}</span>{" "}
             <span>{`//_${name}`}</span>

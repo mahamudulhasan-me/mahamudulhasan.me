@@ -69,7 +69,7 @@ const Projects = () => {
       <Helmet>
         <title>Projects | Mahamudul Hasan</title>
       </Helmet>
-      <div className="h-full w-full text-s1 flex">
+      <div className="lg:h-full w-full text-s1 lg:flex">
         <div className="min-w-[21%] h-full border-r border-p4 ">
           <div
             data-aos="fade-down"
@@ -88,13 +88,12 @@ const Projects = () => {
           {showInfo ? (
             <div
               data-aos="zoom-in"
-              className={`pl-5 px-3 mt-4 space-y-4 category`}
+              className={`pl-5 px-3 mt-4 space-y-4 category border-b lg:border-b-0 border-p4 pb-5`}
             >
               <p className="flex gap-3 items-center text-lg">
                 <input
                   type="checkbox"
                   onChange={handleCheckboxChange}
-                  checked={selectedCategories.includes("html")}
                   value="html"
                 />
                 <RiHtml5Fill size={28} /> <label htmlFor="html">HTML</label>
@@ -103,7 +102,6 @@ const Projects = () => {
                 <input
                   type="checkbox"
                   onChange={handleCheckboxChange}
-                  checked={selectedCategories.includes("css")}
                   value="css"
                 />
                 <RiCss3Fill size={28} /> <label htmlFor="css">CSS</label>
@@ -149,15 +147,18 @@ const Projects = () => {
           )}
         </div>
 
-        <div className="w-[calc(100vw-19rem)] text-s1">
+        <div className="lg:w-[calc(100vw-19rem)] text-s1">
           <div className={`border-b  border-p4 w-full h-10`}>
             <span className="border-r border-p4  h-full flex gap-1 items-center px-3 cursor-pointer w-fit">
-              projects-{selectedCategories.map((item) => item + ",")}
+              projects-
+              {selectedCategories.length === 0
+                ? "All"
+                : selectedCategories.map((item) => item + ",")}
               <RiCloseFill size={20} />
             </span>
           </div>
-          <div className="border-r border-p4  mr-6 min-h-[calc(100%-40px)]">
-            <div className="pt-20 px-10  grid grid-cols-3 gap-5">
+          <div className="border-r border-p4  md:mr-6 min-h-[calc(100%-40px)]">
+            <div className="lg:pt-20 pt-10  lg:px-10 px-5  md:grid grid-cols-3 gap-5 lg:space-y-6 space-y-6">
               {filteredProjects.reverse().map((project) => (
                 <Project key={project._id} project={project} />
               ))}
