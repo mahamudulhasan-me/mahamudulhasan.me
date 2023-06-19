@@ -11,7 +11,7 @@ const AboutCodeSnippet = ({ children }) => {
   };
   return (
     <div>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center ">
         <div className="flex justify-center items-center gap-2">
           <img
             className="w-9 h-9 rounded-full"
@@ -23,7 +23,7 @@ const AboutCodeSnippet = ({ children }) => {
             <p className="text-s1">Created 5 months ago</p>
           </span>
         </div>
-        <div className="text-s1 flex justify-center items-center gap-4">
+        <div className="text-s1 md:flex justify-center items-center gap-4">
           <span className="flex justify-center items-center gap-1">
             <VscOctoface size={24} />{" "}
             <Link className="hover:text-white transition-all">details</Link>

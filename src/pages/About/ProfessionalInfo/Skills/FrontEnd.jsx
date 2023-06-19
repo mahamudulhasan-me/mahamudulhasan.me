@@ -7,12 +7,12 @@ import react from "../../../../assets/images/skills/physics.png";
 
 const FrontEnd = () => {
   return (
-    <div className="px-10">
+    <div className="md:px-10">
       <>
         <h2 className="text-2xl mb-5  flex items-center">
           {`//_front-end skills`}
         </h2>
-        <div className="flex justify-between  items-center">
+        <div className="flex justify-between  items-center flex-wrap">
           <figure className="text-center">
             <img src={html} alt="html5" />
             <p>HTML</p>

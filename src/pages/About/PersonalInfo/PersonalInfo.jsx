@@ -36,7 +36,20 @@ const PersonalInfo = () => {
  * to life and achieve extraordinary results."
  */
   `;
-  const interested = `/**
+  const responsiveBio = (
+    <>
+      * I'm an accomplished MERN stack developer * with a proven track record of
+      creating * exceptional web applications. With * expertise in React,
+      Node.js, and Express.js, * * I bring a unique blend of technical * skills
+      and a keen eye for detail to * every project. With 1 year of industry *
+      experience, I have successfully delivered * cutting-edge solutions that
+      exceed client * expectations. Continuously staying abreast * of the latest
+      trends and technologies, * * I thrive on solving challenges and * creating
+      seamless user experiences. * Collaborate with me to bring your vision * to
+      life and achieve extraordinary results."
+    </>
+  );
+  const interested = `
   * As a web developer,
   * I have a keen interest in emerging
   * technologies and innovative web 
@@ -51,6 +64,16 @@ const PersonalInfo = () => {
   * and build extraordinary digital
   * experiences together.
   */`;
+  const responsiveInterested = (
+    <>
+      * As a web developer, * I have a keen interest in emerging * technologies
+      and innovative web * solutions. * I'm passionate about creating seamless *
+      user experiences and leveraging the * power of web development to bring *
+      ideas to life. Constantly learning * and exploring new trends, I thrive *
+      on the dynamic nature of the web * development industry. Let's collaborate
+      * and build extraordinary digital * experiences together.
+    </>
+  );
   return (
     <>
       <div className="min-w-[31%] border-r border-p4 h-full flex justify-start text-s1">
@@ -93,7 +116,7 @@ const PersonalInfo = () => {
           </Sticky>
         </div>
       </div>
-      <div className="text-s1 w-[calc(100%-15rem)]">
+      <div className="text-s1 lg:w-[calc(100%-15rem)]">
         <Sticky enabled top={56}>
           <div className={`border-b bg-p2  border-p4 w-full h-10 z-40`}>
             <span className="border-r bg-p2 border-p4  h-full flex gap-1 items-center px-3 cursor-pointer w-fit">
@@ -103,10 +126,17 @@ const PersonalInfo = () => {
 
           <div className="px-3 my-5">
             {selectedMenu === "bio" && (
-              <CommentSyntaxHighlighter>{bio}</CommentSyntaxHighlighter>
+              <CommentSyntaxHighlighter responsiveContent={responsiveBio}>
+                {bio}
+              </CommentSyntaxHighlighter>
             )}
+
             {selectedMenu === "interested" && (
-              <CommentSyntaxHighlighter>{interested}</CommentSyntaxHighlighter>
+              <CommentSyntaxHighlighter
+                responsiveContent={responsiveInterested}
+              >
+                {interested}
+              </CommentSyntaxHighlighter>
             )}
             {selectedMenu === "institute" && <Institute />}
             {selectedMenu === "university" && <University />}
