@@ -12,11 +12,11 @@ const About = () => {
       <Helmet>
         <title>About | Mahamudul Hasan</title>
       </Helmet>
-      <div></div>
-      <div className="md:grid grid-cols-12  w-full hidden">
+      {/* <ResponsiveAbout /> */}
+      <div className=" md:grid grid-cols-12  w-full">
         <div className="col-span-7 border-r border-p4 w-full h-full">
-          <div className="flex lg:h-full">
-            <div className="min-w-[7%] border-r border-p4 pt-5  ">
+          <div className="flex h-full items-start lg:items-stretch">
+            <div className="min-w-[7%] border-r border-b lg:border-b-0 border-p4 pt-5  ">
               <Sticky
                 enabled={true}
                 top={80}
@@ -36,7 +36,7 @@ const About = () => {
               </Sticky>
             </div>
 
-            <div className="flex min-w-[93%]">
+            <div className="md:flex md:min-w-[93%] w-full h-full">
               <Outlet />
             </div>
           </div>

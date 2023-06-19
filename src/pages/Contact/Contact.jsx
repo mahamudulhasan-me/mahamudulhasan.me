@@ -20,9 +20,9 @@ const Contact = () => {
       <Helmet>
         <title>Contact | Mahamudul Hasan</title>
       </Helmet>
-      <div className="grid grid-cols-12 min-h-[calc(100vh-6.5rem)]">
-        <div className="col-span-7  border-r border-p4 h-full flex justify-start text-s1">
-          <div className="min-w-[36%] h-full border-r border-p4 ">
+      <div className="md:grid grid-cols-12 lg:min-h-[calc(100vh-6.5rem)]">
+        <div className="col-span-7  border-r border-p4 h-full md:flex justify-start text-s1">
+          <div className="lg:min-w-[36%] w-full h-full border-r border-p4 lg:space-y-0 space-y-1">
             <ContactNumber />
             {/* find me compo */}
             <FindMe />
@@ -76,8 +76,8 @@ const Contact = () => {
         </div>
         <div className="col-span-5 ">
           <div className={`border-b  border-p4 w-full h-10`}></div>
-          <div className="w-full h-full pr-6 ">
-            <div className=" flex w-full h-[calc(100%-40px)] justify-center items-center border-r border-p4">
+          <div className="w-full h-full lg:pr-6 ">
+            <div className=" flex w-full h-[calc(100%-40px)] justify-center items-center lg:border-r border-p4">
               <SyntaxHighlighter
                 language="javascript"
                 showLineNumbers

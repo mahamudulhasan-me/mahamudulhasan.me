@@ -38,6 +38,24 @@ const ProfessionalInfo = () => {
  * extraordinary together!"
  */`;
 
+  const codeResponsive = ` /**
+ * About me
+ * I'm a passionate MERN stack developer
+ * with 1 year of experience. I specialize
+ * in crafting top-notch web applications
+ * that blend cutting-edge technology with
+ * seamless user experiences. From front-end
+ * magic with React to robust server-side
+ * solutions with Node.js and Express.js,
+* 
+* I bring your ideas to life with pixel-
+* perfect precision. I thrive on challenges,
+* possess a meticulous eye for detail,
+* and constantly stay ahead of the curve
+* in the ever-evolving tech landscape.
+* Let's collaborate and create something
+* extraordinary together!"
+*/`;
   const customTheme = {
     background: "transparent",
     fontSize: "18px",
@@ -45,7 +63,7 @@ const ProfessionalInfo = () => {
   };
   return (
     <>
-      <div className="lg:min-w-[31%]  border-r border-p4 h-full flex flex-col justify-start text-s1">
+      <div className="md:min-w-[31%]  border-r border-p4 min-h-1/2 md:h-full flex flex-col justify-start text-s1">
         <div className="w-full">
           {/* professional 2nd nav var with sticky  */}
           <Sticky
@@ -69,7 +87,10 @@ const ProfessionalInfo = () => {
             </div>
 
             {showInfo ? (
-              <div data-aos="zoom-in" className={`px-3 mt-4 space-y-4 `}>
+              <div
+                data-aos="zoom-in"
+                className={`px-3 mt-4 h-fit space-y-4 z-20`}
+              >
                 {/* skill nav  */}
                 <NavSkills selectedStatus={setSelectedMenu} />
                 {/* experience nav  */}
@@ -88,14 +109,14 @@ const ProfessionalInfo = () => {
           top={56}
           innerActiveClass="max-lg:!static max-lg:!transform-none max-lg:!w-auto"
         >
-          <div className={`border-b bg-p2 border-p4 w-full h-10`}>
-            <span className="border-r border-p4  h-full flex gap-1 items-center px-3 cursor-pointer w-fit">
+          <div className={`lg:border-b border bg-p2 border-p4 w-full h-10`}>
+            <span className="border-r border-p4  h-full flex gap-1 items-center px-3 cursor-pointer">
               professional-info <RiCloseFill size={20} />
             </span>
           </div>
-          <div className="px-3 mt-5 w-full">
+          <div className="mg:px-3 mt-5 w-4/5">
             {selectedMenu === "about-me" && (
-              <article>
+              <article hidden>
                 <SyntaxHighlighter
                   language="javascript"
                   style={atelierLakesideDark}
