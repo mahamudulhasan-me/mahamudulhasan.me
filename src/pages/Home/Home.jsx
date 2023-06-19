@@ -46,8 +46,8 @@ const Home = () => {
         style={{ backgroundImage: `url(${bgGrid})` }}
         className="bg-auto bg-top"
       >
-        <div className="min-w-4/5 mx-auto flex justify-center items-center h-[calc(100vh-6rem)] gap-10 bg-p2 bg-opacity-80">
-          <div className="">
+        <div className="lg:min-w-4/5 lg:px-0  px-10 mx-auto flex justify-center items-center h-[calc(100vh-6rem)] gap-10 bg-p2 bg-opacity-80">
+          <div className="ml-5 space-y-36">
             <div className="text-[#E5E9F0]">
               <p className="text-lg ">Hi all. I am</p>
               <h1 className="text-6xl">Mahamudul Hasan</h1>
@@ -55,12 +55,14 @@ const Home = () => {
                 {"<"}Web Application Developer{"/>"}
               </h3>
             </div>
-            <div className="mt-20">
-              <p className="text-s1">{"// complete the game to continue"}</p>
-              <p className="text-s1">
+            <div className="lg:mt-20">
+              <p className="text-s1 hidden lg:block">
+                {"// complete the game to continue"}
+              </p>
+              <p className="text-s1 hidden lg:block">
                 {"// you can also see it on my Github page"}
               </p>
-              <p>
+              <p className="hidden lg:block">
                 <span className="text-s3">const</span>{" "}
                 <span className="text-a2">githubLink</span>{" "}
                 <span className="text-white"> = </span>
@@ -72,6 +74,7 @@ const Home = () => {
                   ”
                 </span>
               </p>
+              <p className="text-s1 mt-5">{"// download my resume"}</p>
               <p>
                 <span className="text-s3">const</span>{" "}
                 <span className="text-a2">downloadResume</span>{" "}
@@ -86,7 +89,8 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="relative h-full flex justify-start items-center">
+          {/* game section  */}
+          <div className="relative h-full lg:flex hidden justify-start items-center">
             <div
               className="z-50 rounded-lg border-2 border-[#010e0e] px-8 py-7 flex justify-center items-center gap-2"
               style={{
