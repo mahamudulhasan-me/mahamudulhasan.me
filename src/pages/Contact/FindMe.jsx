@@ -20,7 +20,7 @@ const FindMe = () => {
         onClick={() => setShowInfo(!showInfo)}
         className={`${
           showInfo ? "text-white" : ""
-        } pl-4 border-y border-p4 w-full h-10 flex gap-1 items-center px-3 cursor-pointer bg-p4 lg:text-s1 text-white`}
+        } pl-4 border-y border-p4 w-full h-10 flex gap-1 items-center px-3 cursor-pointer bg-p4 lg:text-s1 text-white md:bg-transparent`}
       >
         {showInfo ? (
           <RiArrowDownSFill size={24} />
@@ -33,7 +33,7 @@ const FindMe = () => {
       {showInfo ? (
         <div
           data-aos="zoom-in"
-          className={`px-3 mt-4 space-y-2 transition-all duration-500 lg:border-b-0 border-b border-p4 lg:pb-0 pb-5`}
+          className={`px-3 mt-4 space-y-2 transition-all duration-500 lg:border-b-0 border-b border-p4 lg:pb-0 pb-5 `}
         >
           <Link target="_blank" className="flex gap-1">
             <RiInstagramFill size={22} />{" "}

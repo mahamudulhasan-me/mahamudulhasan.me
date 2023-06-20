@@ -36,7 +36,7 @@ const Navbar = () => {
       {isMenuOpen && (
         <nav
           data-aos="fade-left"
-          className="top-14 pt-4 right-0 bottom-0 w-full h-[calc(100vh-7.1rem)]  absolute bg-p2"
+          className="top-14 pt-4 right-0 bottom-0 w-full h-[calc(100vh-7.1rem)]  absolute bg-p2 z-50"
         >
           <ul className="responsive-menu">
             <Link to={"/"} onClick={() => setIsMenuOpen(!isMenuOpen)}>

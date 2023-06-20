@@ -20,8 +20,10 @@ const AboutCodeSnippet = ({ children }) => {
             alt=""
           />
           <span className="">
-            <p className="text-s3 font-semibold text-lg">@mahamudulhasan-me</p>
-            <p className="text-s1">Created 5 months ago</p>
+            <p className="text-s3 font-semibold md:text-lg">
+              @mahamudulhasan-me
+            </p>
+            <p className="text-s1 md:text-base text-sm">Created 5 months ago</p>
           </span>
         </div>
         <div className="text-s1 md:flex justify-center items-center gap-4">

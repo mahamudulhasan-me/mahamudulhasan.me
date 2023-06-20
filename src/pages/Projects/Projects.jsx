@@ -147,7 +147,7 @@ const Projects = () => {
           )}
         </div>
 
-        <div className="lg:w-[calc(100vw-19rem)] text-s1  lg:pb-0 pb-20">
+        <div className="lg:min-w-[calc(100vw-20rem)] text-s1 lg:pb-0 pb-20 ">
           <div className={`border-b  border-p4 w-full h-10`}>
             <span className="border-r border-p4  h-full flex gap-1 items-center px-3 cursor-pointer w-fit">
               projects-
@@ -157,7 +157,7 @@ const Projects = () => {
               <RiCloseFill size={20} />
             </span>
           </div>
-          <div className="border-r border-p4  md:mr-6 min-h-[calc(100%-40px)]">
+          <div className="md:border-r border-p4  md:mr-6 md:min-h-[calc(100%-40px)]">
             <div className="lg:pt-20 pt-10  lg:px-10 px-5  md:grid grid-cols-3 gap-5 lg:space-y-0 space-y-6">
               {filteredProjects.reverse().map((project) => (
                 <Project key={project._id} project={project} />

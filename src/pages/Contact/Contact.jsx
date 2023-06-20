@@ -13,7 +13,7 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const customTheme = {
     background: "transparent",
-    fontSize: "18px",
+    fontSize: "16px",
   };
   return (
     <>
@@ -21,7 +21,7 @@ const Contact = () => {
         <title>Contact | Mahamudul Hasan</title>
       </Helmet>
       <div className="md:grid md:grid-cols-12 lg:min-h-[calc(100vh-6.5rem)]">
-        <div className="col-span-7  border-r border-p4 h-full md:flex justify-start text-s1">
+        <div className="col-span-7  md:border-r border-p4 h-full md:flex justify-start text-s1">
           <div className="lg:min-w-[36%] h-full border-r border-p4  space-y-1">
             <ContactNumber />
             {/* find me compo */}
@@ -77,7 +77,7 @@ const Contact = () => {
         <div className="col-span-5 lg:pb-0 pb-20">
           <div className={`border-b  border-p4 w-full h-10`}></div>
           <div className="w-full h-full lg:pr-6 ">
-            <div className=" flex w-full h-[calc(100%-40px)] justify-center items-center lg:border-r border-p4">
+            <div className=" md:flex w-full lg:h-[calc(100%-40px)] h-full  justify-center items-center lg:border-r border-p4">
               <SyntaxHighlighter
                 language="javascript"
                 showLineNumbers
