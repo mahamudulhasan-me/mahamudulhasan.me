@@ -3,7 +3,10 @@ import node from "../../../../assets/images/skills/Node.js.png";
 
 const BackEnd = () => {
   return (
-    <div className="m-10 ">
+    <div className="md:m-10 ">
+      <p className="mb-3 lg:hidden block">
+        <span className="text-white">//professional-info</span> / skills
+      </p>
       <h2 className="text-2xl mb-5 flex items-center">
         {`//_back-end skills`}
       </h2>

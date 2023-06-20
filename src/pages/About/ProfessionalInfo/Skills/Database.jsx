@@ -4,7 +4,10 @@ import mysql from "../../../../assets/images/skills/MySQL.png";
 
 const Database = () => {
   return (
-    <div className="m-10 ">
+    <div className="md:m-10 ">
+      <p className="mb-3 lg:hidden block">
+        <span className="text-white">//professional-info</span> / skills
+      </p>
       <h2 className="text-2xl  mb-5  flex">
         <RiDatabase2Fill />
         _database

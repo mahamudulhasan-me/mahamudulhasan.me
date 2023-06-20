@@ -14,7 +14,6 @@ const Home = () => {
   const [isGameOver, setIsGameOver] = useState(false);
   const [eatenApples, setEatenApples] = useState(10);
   const [wellDone, setWellDone] = useState(false);
-  console.log(eatenApples);
 
   const playAudio = () => {
     const audio = new Audio(weldoneAudio);
@@ -47,15 +46,15 @@ const Home = () => {
         className="bg-auto bg-top w-full"
       >
         <div className="md:min-w-4/5 md:mx-auto flex justify-center items-center h-[calc(100vh-6rem)] gap-10 bg-p2 bg-opacity-80">
-          <div className="md:space-y-20 space-y-36">
-            <div className="text-[#E5E9F0] md:px-0 px-10">
+          <div className="md:space-y-20 space-y-36 md:mx-0 mx-10">
+            <div className="text-[#E5E9F0] ">
               <p className="text-lg ">Hi all. I am</p>
               <h1 className="text-6xl">Mahamudul Hasan</h1>
               <h3 className="text-s3 text-3xl">
                 {"<"}Web Application Developer{"/>"}
               </h3>
             </div>
-            <div className="md:px-0 px-10">
+            <div>
               <p className="text-s1 hidden lg:block">
                 {"// complete the game to continue"}
               </p>

@@ -36,7 +36,7 @@ const About = () => {
               </Sticky>
             </div>
 
-            <div className="md:flex md:min-w-[93%]">
+            <div className="md:flex md:min-w-[93%] w-full">
               <Outlet />
             </div>
           </div>

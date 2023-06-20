@@ -19,7 +19,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="text-s1  text-lg sticky top-0 h-14 bg-p2 z-50 flex justify-between items-center border-y border-p4">
+    <div className="text-s1   sticky top-0 h-14 bg-p2 z-50 flex justify-between items-center border-y border-p4">
       {/* responsive menu  */}
       <div className="lg:w-[21%] w-full lg:pl-6 lg:px-0 px-10 flex justify-between items-center">
         <span>_mahamudul-hasan</span>

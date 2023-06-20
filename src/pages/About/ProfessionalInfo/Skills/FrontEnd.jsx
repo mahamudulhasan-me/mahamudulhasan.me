@@ -7,7 +7,10 @@ import react from "../../../../assets/images/skills/physics.png";
 
 const FrontEnd = () => {
   return (
-    <div className="md:px-10">
+    <div className="md:px-10 w-full">
+      <p className="mb-3 lg:hidden block">
+        <span className="text-white">//professional-info</span> / skills
+      </p>
       <>
         <h2 className="text-2xl mb-5  flex items-center">
           {`//_front-end skills`}

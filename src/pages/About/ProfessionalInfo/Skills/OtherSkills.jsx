@@ -12,7 +12,10 @@ import reactRouter from "../../../../assets/images/skills/react-router.256x140.p
 const OtherSkills = () => {
   return (
     // other skill scetion
-    <div className="px-10 ">
+    <div className="md:px-10 lg:hidden block">
+      <p className="mb-3">
+        <span className="text-white">//professional-info</span> / skills
+      </p>
       {/* git and github  */}
       <h2 className="text-2xl  mb-5  flex items-center">
         <FaGitAlt /> _git
