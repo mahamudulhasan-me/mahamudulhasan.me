@@ -4,7 +4,7 @@ import { atelierLakesideDark } from "react-syntax-highlighter/dist/esm/styles/hl
 const CommentSyntaxHighlighter = ({ children, responsiveContent }) => {
   const customTheme = {
     background: "transparent",
-    fontSize: "18px",
+    // fontSize: "18px",
     // margin: 0,
   };
   return (

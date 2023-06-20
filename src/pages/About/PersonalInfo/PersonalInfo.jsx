@@ -78,7 +78,11 @@ const PersonalInfo = () => {
     <>
       <div className="min-w-[31%] border-r border-p4 h-full flex justify-start text-s1">
         <div className="w-full">
-          <Sticky enabled top={56}>
+          <Sticky
+            enabled
+            top={56}
+            innerActiveClass="max-lg:!static max-lg:!transform-none max-lg:!w-auto"
+          >
             <div
               data-aos="fade-right"
               onClick={() => setShowInfo(!showInfo)}

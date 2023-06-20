@@ -104,7 +104,7 @@ const ProfessionalInfo = () => {
               professional-info <RiCloseFill size={20} />
             </span>
           </div>
-          <div className="md:px-3 mt-5 lg:w-4/5  h-full">
+          <div className="md:px-3 mt-5   h-full">
             {selectedMenu === "about-me" && (
               <CommentSyntaxHighlighter responsiveContent={responsiveAbout}>
                 {code}

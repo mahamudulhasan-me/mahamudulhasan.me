@@ -36,12 +36,12 @@ const About = () => {
               </Sticky>
             </div>
 
-            <div className="md:flex md:min-w-[93%] w-full h-full">
+            <div className="md:flex md:min-w-[93%]">
               <Outlet />
             </div>
           </div>
         </div>
-        <div className="col-span-5  lg:pb-0 pb-20">
+        <div className="col-span-5  lg:pb-0 pb-10">
           <div className={`border-b border-p4 w-full h-10`}></div>
           <div className="w-full md:pr-6 md:px-0 px-2">
             <div className="w-full min-h-[calc(100%-40px)] px-5 mb-10 py-3 border-r border-p4">
