@@ -44,18 +44,18 @@ const Home = () => {
       </Helmet>
       <div
         style={{ backgroundImage: `url(${bgGrid})` }}
-        className="bg-auto bg-top"
+        className="bg-auto bg-top w-full"
       >
-        <div className="lg:min-w-4/5 lg:px-0  px-10 mx-auto flex justify-center items-center h-[calc(100vh-6rem)] gap-10 bg-p2 bg-opacity-80">
-          <div className="ml-5 space-y-36">
-            <div className="text-[#E5E9F0]">
+        <div className="md:min-w-4/5 md:mx-auto flex justify-center items-center h-[calc(100vh-6rem)] gap-10 bg-p2 bg-opacity-80">
+          <div className="md:space-y-20 space-y-36">
+            <div className="text-[#E5E9F0] md:px-0 px-10">
               <p className="text-lg ">Hi all. I am</p>
               <h1 className="text-6xl">Mahamudul Hasan</h1>
               <h3 className="text-s3 text-3xl">
                 {"<"}Web Application Developer{"/>"}
               </h3>
             </div>
-            <div className="lg:mt-20">
+            <div className="md:px-0 px-10">
               <p className="text-s1 hidden lg:block">
                 {"// complete the game to continue"}
               </p>
@@ -82,7 +82,7 @@ const Home = () => {
                 <span className="text-a3">
                   “
                   <Link className="underline ">
-                    https://docs.google.com/resume/download
+                    https://docs.google.com/resume/
                   </Link>
                   ”
                 </span>
