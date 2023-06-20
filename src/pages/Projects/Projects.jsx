@@ -147,7 +147,7 @@ const Projects = () => {
           )}
         </div>
 
-        <div className="lg:w-[calc(100vw-19rem)] text-s1">
+        <div className="lg:w-[calc(100vw-19rem)] text-s1  lg:pb-0 pb-20">
           <div className={`border-b  border-p4 w-full h-10`}>
             <span className="border-r border-p4  h-full flex gap-1 items-center px-3 cursor-pointer w-fit">
               projects-

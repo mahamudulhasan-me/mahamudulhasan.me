@@ -74,7 +74,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-5 ">
+        <div className="col-span-5 lg:pb-0 pb-20">
           <div className={`border-b  border-p4 w-full h-10`}></div>
           <div className="w-full h-full lg:pr-6 ">
             <div className=" flex w-full h-[calc(100%-40px)] justify-center items-center lg:border-r border-p4">

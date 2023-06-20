@@ -41,7 +41,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-5 ">
+        <div className="col-span-5  lg:pb-0 pb-20">
           <div className={`border-b border-p4 w-full h-10`}></div>
           <div className="w-full md:pr-6 md:px-0 px-2">
             <div className="w-full min-h-[calc(100%-40px)] px-5 mb-10 py-3 border-r border-p4">

@@ -12,7 +12,7 @@ const Main = () => {
   return (
     <div className="min-h-[calc(100vh-2px)] content-container">
       <Navbar />
-      <div className="h-[calc(100vh-4rem)] ">
+      <div className="h-[calc(100vh-4rem)]">
         <Outlet />
       </div>
       <Footer />
