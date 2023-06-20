@@ -10,9 +10,10 @@ const Main = () => {
     Aos.init();
   }, []);
   return (
-    <div className="min-h-[calc(100vh-2px)] content-container">
+    <div className="relative min-h-[calc(100vh-2px)] content-container">
+      <div className="z-10 animate-content animate-rotate"></div>
       <Navbar />
-      <div className="h-[calc(100vh-4rem)]">
+      <div className=" z-20 h-[calc(100vh-4rem)]">
         <Outlet />
       </div>
       <Footer />

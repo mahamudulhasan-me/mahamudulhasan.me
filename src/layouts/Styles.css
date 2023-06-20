@@ -15,3 +15,36 @@
 .content-container::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
+
+.animate-content {
+  background-image: radial-gradient(at 27% 37%, #3a8bfd 0, transparent 0),
+    radial-gradient(at 97% 21%, #72fe7d 0, transparent 50%),
+    radial-gradient(at 52% 99%, #fd3a4e 0, transparent 50%),
+    radial-gradient(at 10% 29%, #855afc 0, transparent 50%),
+    radial-gradient(at 97% 96%, #e4c795 0, transparent 50%),
+    radial-gradient(at 33% 50%, #8ca8e8 0, transparent 50%),
+    radial-gradient(at 79% 53%, #eea5ba 0, transparent 50%);
+  filter: blur(100px) saturate(150%);
+  opacity: 0.1;
+  background-attachment: fixed;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform-origin: top left;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  height: 50vh;
+}
+.animate-rotate {
+  -webkit-animation: rotate 70s ease-in-out infinite;
+  animation: rotate 50s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 1turn;
+  }
+}

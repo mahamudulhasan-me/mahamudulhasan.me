@@ -29,7 +29,7 @@ const About = () => {
                   <AboutMainMenuActive to={"/about/personal-info"}>
                     <RiInformationFill />
                   </AboutMainMenuActive>
-                  <AboutMainMenuActive to={"/about/hobbies"}>
+                  <AboutMainMenuActive to={"/about/professional-info"}>
                     <RiGamepadFill />
                   </AboutMainMenuActive>
                 </div>

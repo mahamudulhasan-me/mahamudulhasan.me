@@ -155,7 +155,7 @@ const Home = () => {
                         setWellDone(false),
                         setEatenApples(10);
                     }}
-                    className="absolute bottom-16 bg-a1 text-p1 font-semibold px-7 py-3 rounded-lg outline-none"
+                    className="absolute bottom-16 bg-a1 text-p1 font-semibold px-4 py-2 rounded-lg outline-none"
                   >
                     play-game
                   </button>
