@@ -83,14 +83,14 @@ const ModalProject = ({ isOpen, closeModal, content }) => {
                   target="_blank"
                   className="bg-[#1C2B3A] hover:bg-[#263B50] text-white px-3 py-2 rounded-lg mb-8 transition-all flex justify-center items-center gap-2"
                 >
-                  <MdViewInAr size={30} /> preview
+                  <MdViewInAr size={24} /> preview
                 </Link>
                 <Link
                   to={codeLink}
                   target="_blank"
-                  className="bg-[#1C2B3A] hover:bg-[#263B50] text-white px-3 py-2 rounded-lg mb-8 transition-all flex justify-center items-center gap-2"
+                  className="bg-[#1C2B3A] hover:bg-[#263B50] text-white px-2 py-1 rounded-lg mb-8 transition-all flex justify-center items-center gap-2"
                 >
-                  <RiCodeSSlashFill size={30} /> view-code
+                  <RiCodeSSlashFill size={24} /> view-code
                 </Link>
               </div>
             </div>

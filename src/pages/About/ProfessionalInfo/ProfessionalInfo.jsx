@@ -98,7 +98,7 @@ const ProfessionalInfo = () => {
             {showInfo ? (
               <div
                 data-aos="zoom-in"
-                className={`px-3 mt-4 border-p4 space-y-4 z-20 border-l md:border-l-0 `}
+                className={`px-3 mt-4 border-p4 space-y-4  border-l md:border-l-0 `}
               >
                 {/* skill nav  */}
                 <NavSkills selectedStatus={setSelectedMenu} />

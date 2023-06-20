@@ -7,10 +7,11 @@ import { gradientDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 const AboutCodeSnippet = ({ children }) => {
   const customTheme = {
     background: "transparent",
-    fontSize: "16px",
+    width: "100%",
+    fontSize: "14px",
   };
   return (
-    <div>
+    <div className="w-full overflow-auto">
       <div className="flex justify-between items-center ">
         <div className="flex justify-center items-center gap-2">
           <img
@@ -33,7 +34,7 @@ const AboutCodeSnippet = ({ children }) => {
           </span>
         </div>
       </div>
-      <div className="bg-p3 border border-p4 rounded-xl py-2 mt-3">
+      <div className="bg-p3 border border-p4 rounded-xl py-2 mt-3 ">
         <SyntaxHighlighter
           language="javascript"
           showLineNumbers

@@ -19,7 +19,7 @@ body {
   @apply w-5 h-5 mr-2;
 }
 .contact-form input {
-  @apply w-[23rem] h-10 bg-p3 rounded-lg px-3 py-4 outline-none border border-p4 mt-2 transition-all;
+  @apply md:w-[23rem] w-[20rem]  h-10 bg-p3 rounded-lg px-3 py-4 outline-none border border-p4 mt-2 transition-all;
 }
 
 .contact-form input:focus,

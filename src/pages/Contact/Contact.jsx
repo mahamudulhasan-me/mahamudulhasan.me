@@ -34,7 +34,7 @@ const Contact = () => {
                 <RiCloseFill size={20} />
               </span>
             </div>
-            <div className="flex justify-center items-center h-full">
+            <div className="flex justify-center items-center h-full w-full">
               <form className="contact-form space-y-6">
                 <div>
                   <label htmlFor="name">_name</label>
@@ -61,7 +61,7 @@ const Contact = () => {
                   <textarea
                     name="message"
                     onChange={(e) => setMessage(e.target.value)}
-                    className="w-[23rem] h-36 bg-p3 rounded-lg px-3 py-4 outline-none border border-p4 mt-2"
+                    className="md:w-[23rem] w-[20rem] h-36 bg-p3 rounded-lg px-3 py-4 outline-none border border-p4 mt-2"
                   ></textarea>
                 </div>
                 <button

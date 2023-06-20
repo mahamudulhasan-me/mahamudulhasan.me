@@ -158,7 +158,7 @@ const Projects = () => {
             </span>
           </div>
           <div className="border-r border-p4  md:mr-6 min-h-[calc(100%-40px)]">
-            <div className="lg:pt-20 pt-10  lg:px-10 px-5  md:grid grid-cols-3 gap-5 lg:space-y-6 space-y-6">
+            <div className="lg:pt-20 pt-10  lg:px-10 px-5  md:grid grid-cols-3 gap-5 lg:space-y-0 space-y-6">
               {filteredProjects.reverse().map((project) => (
                 <Project key={project._id} project={project} />
               ))}
