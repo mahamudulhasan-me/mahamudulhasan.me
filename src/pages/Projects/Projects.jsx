@@ -13,6 +13,7 @@ import {
 } from "react-icons/ri";
 import { SiTailwindcss } from "react-icons/si";
 
+import Sticky from "react-stickynode";
 import Project from "./Project";
 
 const Projects = () => {
@@ -20,6 +21,24 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [filteredProjects, setFilteredProjects] = useState([]);
+  const [topValue, setTopValue] = useState(57); // Default top value
+
+  useEffect(() => {
+    const handleResize = () => {
+      const isMobile = window.innerWidth <= 600; // Define your mobile breakpoint here
+      const newTopValue = isMobile ? 0 : 57; // Modify the top value based on device
+
+      setTopValue(newTopValue);
+    };
+
+    handleResize(); // Set initial value
+
+    window.addEventListener("resize", handleResize); // Listen for resize events
+
+    return () => {
+      window.removeEventListener("resize", handleResize); // Cleanup event listener
+    };
+  }, []);
 
   useEffect(() => {
     fetchProjects();
@@ -71,80 +90,84 @@ const Projects = () => {
       </Helmet>
       <div className="lg:h-full w-full text-s1 lg:flex">
         <div className="min-w-[21%] h-full border-r border-p4 ">
-          <div
-            data-aos="fade-down"
-            onClick={() => setShowInfo(!showInfo)}
-            className={`${
-              showInfo ? "text-white" : ""
-            } pl-4 border-b border-p4 w-full h-10 flex gap-1 items-center px-3 cursor-pointer`}
-          >
-            {showInfo ? (
-              <RiArrowDownSFill size={24} />
-            ) : (
-              <RiArrowRightSFill size={24} />
-            )}
-            projects
-          </div>
-          {showInfo ? (
+          <Sticky enabled top={topValue}>
             <div
-              data-aos="zoom-in"
-              className={`pl-5 px-3 mt-4 space-y-4 category border-b lg:border-b-0 border-p4 pb-5`}
+              data-aos="fade-down"
+              onClick={() => setShowInfo(!showInfo)}
+              className={`${
+                showInfo ? "text-white" : ""
+              } pl-4 border-b border-p4 w-full h-10 flex gap-1 items-center px-3 cursor-pointer`}
             >
-              <p className="flex gap-3 items-center text-lg">
-                <input
-                  type="checkbox"
-                  onChange={handleCheckboxChange}
-                  value="html"
-                />
-                <RiHtml5Fill size={28} /> <label htmlFor="html">HTML</label>
-              </p>
-              <p className="flex gap-3 items-center text-lg">
-                <input
-                  type="checkbox"
-                  onChange={handleCheckboxChange}
-                  value="css"
-                />
-                <RiCss3Fill size={28} /> <label htmlFor="css">CSS</label>
-              </p>
-              <p className="flex gap-3 items-center text-lg">
-                <input
-                  type="checkbox"
-                  onChange={handleCheckboxChange}
-                  value="bootstrap"
-                />
-                <BsFillBootstrapFill size={28} />{" "}
-                <label htmlFor="bootstrap">Bootstrap</label>
-              </p>
-              <p className="flex gap-3 items-center text-lg">
-                <input
-                  type="checkbox"
-                  onChange={handleCheckboxChange}
-                  value="tailwind"
-                />
-                <SiTailwindcss size={28} />{" "}
-                <label htmlFor="tailwind">Tailwind</label>
-              </p>
-              <p className="flex gap-3 items-center text-lg">
-                <input
-                  type="checkbox"
-                  onChange={handleCheckboxChange}
-                  value="react"
-                />
-                <RiReactjsFill size={28} /> <label htmlFor="react">React</label>
-              </p>
-              <p className="flex gap-3 items-center text-lg">
-                <input
-                  type="checkbox"
-                  onChange={handleCheckboxChange}
-                  value="fullStack"
-                />
-                <RiStackFill size={28} />{" "}
-                <label htmlFor="fullStack">Full Stack</label>
-              </p>
+              {showInfo ? (
+                <RiArrowDownSFill size={24} />
+              ) : (
+                <RiArrowRightSFill size={24} />
+              )}
+              projects
             </div>
-          ) : (
-            ""
-          )}
+
+            {showInfo ? (
+              <div
+                data-aos="zoom-in"
+                className={`pl-5 px-3 mt-4 space-y-4 category border-b lg:border-b-0 border-p4 pb-5`}
+              >
+                <p className="flex gap-3 items-center text-lg">
+                  <input
+                    type="checkbox"
+                    onChange={handleCheckboxChange}
+                    value="html"
+                  />
+                  <RiHtml5Fill size={28} /> <label htmlFor="html">HTML</label>
+                </p>
+                <p className="flex gap-3 items-center text-lg">
+                  <input
+                    type="checkbox"
+                    onChange={handleCheckboxChange}
+                    value="css"
+                  />
+                  <RiCss3Fill size={28} /> <label htmlFor="css">CSS</label>
+                </p>
+                <p className="flex gap-3 items-center text-lg">
+                  <input
+                    type="checkbox"
+                    onChange={handleCheckboxChange}
+                    value="bootstrap"
+                  />
+                  <BsFillBootstrapFill size={28} />{" "}
+                  <label htmlFor="bootstrap">Bootstrap</label>
+                </p>
+                <p className="flex gap-3 items-center text-lg">
+                  <input
+                    type="checkbox"
+                    onChange={handleCheckboxChange}
+                    value="tailwind"
+                  />
+                  <SiTailwindcss size={28} />{" "}
+                  <label htmlFor="tailwind">Tailwind</label>
+                </p>
+                <p className="flex gap-3 items-center text-lg">
+                  <input
+                    type="checkbox"
+                    onChange={handleCheckboxChange}
+                    value="react"
+                  />
+                  <RiReactjsFill size={28} />{" "}
+                  <label htmlFor="react">React</label>
+                </p>
+                <p className="flex gap-3 items-center text-lg">
+                  <input
+                    type="checkbox"
+                    onChange={handleCheckboxChange}
+                    value="fullStack"
+                  />
+                  <RiStackFill size={28} />{" "}
+                  <label htmlFor="fullStack">Full Stack</label>
+                </p>
+              </div>
+            ) : (
+              ""
+            )}
+          </Sticky>
         </div>
 
         <div className="lg:min-w-[calc(100vw-20rem)] text-s1 lg:pb-0 pb-20 ">

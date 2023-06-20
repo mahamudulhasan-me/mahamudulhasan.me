@@ -1,13 +1,14 @@
 [
   {
-    "_id": 3,
-    "projectNo": "Project 3",
-    "name": "legal-solution",
-    "image": "./projectImage/legal-solution.png",
-    "category": ["bootstrap"],
-    "technologies": ["html", "css", "bootstrap"],
-    "liveLink": "https://musical-lebkuchen-3bf71d.netlify.app",
-    "codeLink": "https://github.com/mahamudulhasan-me/legal-solution.git",
+    "_id": 1,
+    "projectNo": "Project 1",
+    "name": "newYear-newMe",
+    "image": "./projectImage/newyear-newme.png",
+    "category": ["html", "css"],
+    "technologies": ["html", "css"],
+    "features": ["banner-section", "features", "blog-section", "footer"],
+    "liveLink": "https://mahamudulhasan-me.github.io/newYear-newMe/",
+    "codeLink": "https://github.com/mahamudulhasan-me/newYear-newMe",
     "description": "This is the description of Project 1."
   },
   {
@@ -22,15 +23,42 @@
     "description": "This is the description of Project 1."
   },
   {
-    "_id": 1,
-    "projectNo": "Project 1",
-    "name": "newYear-newMe",
-    "image": "./projectImage/newyear-newme.png",
-    "category": ["html", "css"],
-    "technologies": ["html", "css"],
-    "features": ["banner-section", "features", "blog-section", "footer"],
-    "liveLink": "https://mahamudulhasan-me.github.io/newYear-newMe/",
-    "codeLink": "https://github.com/mahamudulhasan-me/newYear-newMe",
+    "_id": 3,
+    "projectNo": "Project 3",
+    "name": "legal-solution",
+    "image": "./projectImage/legal-solution.png",
+    "category": ["bootstrap"],
+    "technologies": ["html", "css", "bootstrap"],
+    "liveLink": "https://musical-lebkuchen-3bf71d.netlify.app",
+    "codeLink": "https://github.com/mahamudulhasan-me/legal-solution.git",
     "description": "This is the description of Project 1."
+  },
+  {
+    "_id": 12,
+    "projectNo": "Project 12",
+    "name": "dance-school",
+    "image": "./projectImage/dance-school.jpg",
+    "category": ["react", "full-stack", "tailwind", "express"],
+    "technologies": [
+      "html",
+      "css",
+      "tailwind",
+      "javascript",
+      "react",
+      "firebase",
+      "express.js",
+      "mongodb"
+    ],
+    "features": [
+      "navigation",
+      "home-page",
+      "all-instructor",
+      "apply-classes",
+      "dashboard",
+      "authentication"
+    ],
+    "liveLink": "https://dance-school-6fa61.web.app/",
+    "codeLink": "https://github.com/mahamudulhasan-me/dance-school.git",
+    "description": "Discover the artistry of dance at our vibrant dance school, offering a wide range of classes for all ages and skill levels. Experience the joy of movement and expression through our dance school's expert instruction, nurturing a passion for dance in a supportive and inclusive environment. admin-email:admin@danceschool.com, password:Admin@626456 "
   }
 ]

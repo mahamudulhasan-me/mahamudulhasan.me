@@ -38,7 +38,9 @@ const Project = ({ project }) => {
         </figure>
 
         <div className="mx-8">
-          <p className="text-lg my-6  ">{description}</p>
+          <p className="text-lg my-6  text-justify">
+            {description.slice(0, 60)}...
+          </p>
           <button
             onClick={openModal}
             className="bg-[#1C2B3A] hover:bg-[#263B50] text-white px-3 py-2 rounded-lg mb-8 transition-all"
