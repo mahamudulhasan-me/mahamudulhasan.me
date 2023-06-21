@@ -89,7 +89,7 @@ const Home = () => {
             </div>
           </div>
           {/* game section  */}
-          <div className="relative h-full lg:flex hidden justify-start items-center">
+          <div className="z-50 relative  h-full lg:flex hidden justify-start items-center">
             <div
               className="z-50 rounded-lg border-2 border-[#010e0e] px-8 py-7 flex justify-center items-center gap-2"
               style={{
@@ -127,7 +127,7 @@ const Home = () => {
                 )}
                 {wellDone && (
                   <div
-                    data-aos="zoom-in"
+                    // data-aos="zoom-in"
                     style={{ background: "rgba(1, 22, 39, 0.84)" }}
                     className="absolute left-9 right-[13.2rem] bottom-36 text-center text-a2 text-2xl uppercase py-2"
                   >
@@ -135,6 +135,7 @@ const Home = () => {
                   </div>
                 )}
                 {/* play game button */}
+
                 {isGameOver ? (
                   <button
                     onClick={() => {
@@ -142,13 +143,13 @@ const Home = () => {
                       setEatenApples(10);
                       setWellDone(false);
                     }}
-                    className="absolute bottom-16 text-s1 font-semibold px-7 py-3 rounded-lg outline-none"
+                    className="absolute  bottom-16 text-s1 font-semibold px-7 py-3 rounded-lg outline-none"
                   >
                     Play Again
                   </button>
                 ) : (
                   <button
-                    data-aos="zoom-in"
+                    // data-aos="zoom-in"
                     disabled={playGame}
                     onClick={() => {
                       setPlayGame(!playGame),
