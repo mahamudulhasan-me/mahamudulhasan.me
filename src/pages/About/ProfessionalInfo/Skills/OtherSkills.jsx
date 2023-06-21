@@ -11,8 +11,8 @@ import reactRouter from "../../../../assets/images/skills/react-router.256x140.p
 const OtherSkills = () => {
   return (
     // other skill scetion
-    <div className="md:px-10  block z-50">
-      <p className="mb-3 lg:hidden">
+    <div className="md:px-10">
+      <p className="mb-3 lg:hidden block">
         <span className="text-white">//professional-info</span> / skills
       </p>
       {/* git and github  */}

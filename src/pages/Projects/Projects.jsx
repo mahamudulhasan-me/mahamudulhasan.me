@@ -13,7 +13,6 @@ import {
 } from "react-icons/ri";
 import { SiTailwindcss } from "react-icons/si";
 
-import Sticky from "react-stickynode";
 import Project from "./Project";
 
 const Projects = () => {
@@ -90,84 +89,81 @@ const Projects = () => {
       </Helmet>
       <div className="lg:min-h-full w-full text-s1 lg:flex">
         <div className="min-w-[21%]  border-r border-p4 ">
-          <Sticky enabled top={topValue}>
-            <div
-              data-aos="fade-down"
-              onClick={() => setShowInfo(!showInfo)}
-              className={`${
-                showInfo ? "text-white" : ""
-              } pl-4 border-b border-p4 w-full h-10 flex gap-1 items-center px-3 cursor-pointer`}
-            >
-              {showInfo ? (
-                <RiArrowDownSFill size={24} />
-              ) : (
-                <RiArrowRightSFill size={24} />
-              )}
-              projects
-            </div>
-
+          <div
+            data-aos="fade-down"
+            onClick={() => setShowInfo(!showInfo)}
+            className={`${
+              showInfo ? "text-white" : ""
+            } pl-4 border-b border-p4 w-full h-10 flex gap-1 items-center px-3 cursor-pointer`}
+          >
             {showInfo ? (
-              <div
-                data-aos="zoom-in"
-                className={`pl-5 px-3 mt-4 space-y-4 category border-b lg:border-b-0 border-p4 pb-5`}
-              >
-                <p className="flex gap-3 items-center text-lg">
-                  <input
-                    type="checkbox"
-                    onChange={handleCheckboxChange}
-                    value="html"
-                  />
-                  <RiHtml5Fill size={28} /> <label htmlFor="html">HTML</label>
-                </p>
-                <p className="flex gap-3 items-center text-lg">
-                  <input
-                    type="checkbox"
-                    onChange={handleCheckboxChange}
-                    value="css"
-                  />
-                  <RiCss3Fill size={28} /> <label htmlFor="css">CSS</label>
-                </p>
-                <p className="flex gap-3 items-center text-lg">
-                  <input
-                    type="checkbox"
-                    onChange={handleCheckboxChange}
-                    value="bootstrap"
-                  />
-                  <BsFillBootstrapFill size={28} />{" "}
-                  <label htmlFor="bootstrap">Bootstrap</label>
-                </p>
-                <p className="flex gap-3 items-center text-lg">
-                  <input
-                    type="checkbox"
-                    onChange={handleCheckboxChange}
-                    value="tailwind"
-                  />
-                  <SiTailwindcss size={28} />{" "}
-                  <label htmlFor="tailwind">Tailwind</label>
-                </p>
-                <p className="flex gap-3 items-center text-lg">
-                  <input
-                    type="checkbox"
-                    onChange={handleCheckboxChange}
-                    value="react"
-                  />
-                  <RiReactjsFill size={28} />{" "}
-                  <label htmlFor="react">React</label>
-                </p>
-                <p className="flex gap-3 items-center text-lg">
-                  <input
-                    type="checkbox"
-                    onChange={handleCheckboxChange}
-                    value="fullStack"
-                  />
-                  <RiStackFill size={28} />{" "}
-                  <label htmlFor="fullStack">Full Stack</label>
-                </p>
-              </div>
+              <RiArrowDownSFill size={24} />
             ) : (
-              ""
+              <RiArrowRightSFill size={24} />
             )}
-          </Sticky>
+            projects
+          </div>
+
+          {showInfo ? (
+            <div
+              data-aos="zoom-in"
+              className={`pl-5 px-3 mt-4 space-y-4 category border-b lg:border-b-0 border-p4 pb-5`}
+            >
+              <p className="flex gap-3 items-center text-lg">
+                <input
+                  type="checkbox"
+                  onChange={handleCheckboxChange}
+                  value="html"
+                />
+                <RiHtml5Fill size={28} /> <label htmlFor="html">HTML</label>
+              </p>
+              <p className="flex gap-3 items-center text-lg">
+                <input
+                  type="checkbox"
+                  onChange={handleCheckboxChange}
+                  value="css"
+                />
+                <RiCss3Fill size={28} /> <label htmlFor="css">CSS</label>
+              </p>
+              <p className="flex gap-3 items-center text-lg">
+                <input
+                  type="checkbox"
+                  onChange={handleCheckboxChange}
+                  value="bootstrap"
+                />
+                <BsFillBootstrapFill size={28} />{" "}
+                <label htmlFor="bootstrap">Bootstrap</label>
+              </p>
+              <p className="flex gap-3 items-center text-lg">
+                <input
+                  type="checkbox"
+                  onChange={handleCheckboxChange}
+                  value="tailwind"
+                />
+                <SiTailwindcss size={28} />{" "}
+                <label htmlFor="tailwind">Tailwind</label>
+              </p>
+              <p className="flex gap-3 items-center text-lg">
+                <input
+                  type="checkbox"
+                  onChange={handleCheckboxChange}
+                  value="react"
+                />
+                <RiReactjsFill size={28} /> <label htmlFor="react">React</label>
+              </p>
+              <p className="flex gap-3 items-center text-lg">
+                <input
+                  type="checkbox"
+                  onChange={handleCheckboxChange}
+                  value="fullStack"
+                />
+                <RiStackFill size={28} />{" "}
+                <label htmlFor="fullStack">Full Stack</label>
+              </p>
+            </div>
+          ) : (
+            ""
+          )}
         </div>
 
         <div className="lg:min-w-[calc(100vw-20rem)]  text-s1">
@@ -181,8 +177,8 @@ const Projects = () => {
             </span>
           </div>
           <div className="md:border-r border-p4  md:mr-6 md:min-h-[calc(100%-40px)] pb-20">
-            <div className="lg:pt-20 pt-10  lg:px-10 px-5  md:grid grid-cols-3 gap-5 lg:space-y-0 space-y-6">
-              {filteredProjects.reverse().map((project) => (
+            <div className="lg:pt-20 pt-10  lg:px-10 px-5  md:grid grid-cols-3 grid-rows-1 gap-5 lg:space-y-0 space-y-6">
+              {filteredProjects.slice(0, 3).map((project) => (
                 <Project key={project._id} project={project} />
               ))}
             </div>

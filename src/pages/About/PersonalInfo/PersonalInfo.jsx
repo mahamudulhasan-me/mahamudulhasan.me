@@ -147,7 +147,7 @@ const PersonalInfo = () => {
       <div className="text-s1 lg:w-[calc(100%-14rem)] h-full">
         <Sticky enabled top={topValue}>
           <div
-            className={`md:border-b  border md:border-0 bg-p2  border-p4 w-full h-10 z-40 lg:block hidden`}
+            className={`md:border-b  border md:border-0 bg-p2  border-p4 w-full h-10 lg:block hidden`}
           >
             <span className="border-r bg-p2 border-p4  h-full flex gap-1 items-center px-3 cursor-pointer w-fit">
               Personal Info <RiCloseFill size={20} />

@@ -35,3 +35,20 @@ body {
 .responsive-menu li {
   @apply border-b border-p4 text-xl h-16 flex justify-center items-center;
 }
+[data-aos] {
+  pointer-events: none;
+}
+.aos-animate {
+  pointer-events: auto;
+}
+.aos-init[data-aos][data-aos].aos-animate {
+  transform: unset;
+}
+
+[data-aos] {
+  z-index: 1;
+  pointer-events: none;
+  &.aos-animate {
+    pointer-events: auto;
+  }
+}

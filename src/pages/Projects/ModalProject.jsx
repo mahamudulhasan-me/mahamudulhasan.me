@@ -27,11 +27,11 @@ const ModalProject = ({ isOpen, closeModal, content }) => {
   return (
     <div
       data-aos="zoom-out"
-      className="fixed top-0 left-0 w-full h-full z-40 flex justify-center items-center bg-p2 bg-opacity-70 "
+      className="fixed z-50 top-0 left-0 w-full h-full  flex justify-center items-center bg-p2 bg-opacity-70 "
     >
       <div className=" bg-opacity-70 md:w-1/2 relative py-10 rounded-xl ">
         <span
-          className="text-red-700 lg:top-10 top-5 right-10 absolute cursor-pointer z-50"
+          className="text-red-700 lg:top-10 top-5 right-10 absolute cursor-pointer "
           onClick={closeModal}
         >
           <RiCloseLine size={40} />

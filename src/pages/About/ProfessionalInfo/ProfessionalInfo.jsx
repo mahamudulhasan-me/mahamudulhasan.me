@@ -81,7 +81,7 @@ const ProfessionalInfo = () => {
           <div className="w-full">
             {/* professional 2nd nav var with sticky  */}
             <div
-              data-aos="fade-down"
+              // data-aos="fade-down"
               onClick={() => setShowInfo(!showInfo)}
               className={`${
                 showInfo ? "text-white" : "md:text-s1"

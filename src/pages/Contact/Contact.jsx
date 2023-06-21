@@ -22,7 +22,7 @@ const Contact = () => {
       </Helmet>
       <div className="md:grid md:grid-cols-12 lg:min-h-[calc(100vh-6.5rem)]">
         <div className="col-span-7  md:border-r border-p4 h-full md:flex justify-start text-s1">
-          <div className="lg:min-w-[36%] h-full border-r border-p4  space-y-1">
+          <div className="lg:min-w-[36%] h-full border-r border-p4  space-y-1 -z-50">
             <ContactNumber />
             {/* find me compo */}
             <FindMe />

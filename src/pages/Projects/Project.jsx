@@ -33,7 +33,7 @@ const Project = ({ project }) => {
           alt=""
           className="absolute w-10 right-4 top-4"
         />
-        <figure className="w-full h-36 rounded-t-2xl border-b border-p4 overflow-hidden">
+        <figure className=" w-full h-36 rounded-t-2xl border-b border-p4 overflow-hidden">
           <img src={image} alt="" />
         </figure>
 
