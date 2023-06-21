@@ -11,9 +11,9 @@ const Main = () => {
   }, []);
   return (
     <div className="relative min-h-[calc(100vh-2px)] content-container">
-      <div className="z-10 animate-content animate-rotate"></div>
+      <div className="-z-10 animate-content animate-rotate"></div>
       <Navbar />
-      <div className=" z-20 h-[calc(100vh-4rem)]">
+      <div className="h-[calc(100vh-4rem)] z-0">
         <Outlet />
       </div>
       <Footer />

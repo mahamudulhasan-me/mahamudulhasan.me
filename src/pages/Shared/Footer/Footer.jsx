@@ -20,6 +20,9 @@ const Footer = () => {
           <RiFacebookFill size={24} />
         </Link>
       </div>
+      <small className="text-xs hidden lg:block">
+        design-inspired by Yanka
+      </small>
       <div
         className="min-w-2/12 lg:border-l lg:border-r-0 lg:pr-0 pl-5 h-full flex justify-end items-center border-p4 border-r pr-5
       "

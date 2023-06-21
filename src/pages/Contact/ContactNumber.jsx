@@ -23,8 +23,8 @@ const ContactNumber = () => {
         data-aos="fade-right"
         onClick={() => setShowInfo(!showInfo)}
         className={`${
-          showInfo ? "text-white" : ""
-        } pl-4 border-b border-p4 w-full h-10 flex gap-1 items-center px-3 cursor-pointer lg:bg-transparent bg-p4 lg:text-s1 text-white`}
+          showInfo ? "text-white" : "lg:text-s1"
+        } pl-4 border-b border-p4 w-full h-10 flex gap-1 items-center px-3 cursor-pointer lg:bg-transparent bg-p4  text-white`}
       >
         {showInfo ? (
           <RiArrowDownSFill size={24} />

@@ -88,8 +88,8 @@ const Projects = () => {
       <Helmet>
         <title>Projects | Mahamudul Hasan</title>
       </Helmet>
-      <div className="lg:h-full w-full text-s1 lg:flex">
-        <div className="min-w-[21%] h-full border-r border-p4 ">
+      <div className="lg:min-h-full w-full text-s1 lg:flex">
+        <div className="min-w-[21%]  border-r border-p4 ">
           <Sticky enabled top={topValue}>
             <div
               data-aos="fade-down"
@@ -170,7 +170,7 @@ const Projects = () => {
           </Sticky>
         </div>
 
-        <div className="lg:min-w-[calc(100vw-20rem)] text-s1 lg:pb-0 pb-20 ">
+        <div className="lg:min-w-[calc(100vw-20rem)]  text-s1">
           <div className={`border-b  border-p4 w-full h-10`}>
             <span className="border-r border-p4  h-full flex gap-1 items-center px-3 cursor-pointer w-fit">
               projects-
@@ -180,7 +180,7 @@ const Projects = () => {
               <RiCloseFill size={20} />
             </span>
           </div>
-          <div className="md:border-r border-p4  md:mr-6 md:min-h-[calc(100%-40px)]">
+          <div className="md:border-r border-p4  md:mr-6 md:min-h-[calc(100%-40px)] pb-20">
             <div className="lg:pt-20 pt-10  lg:px-10 px-5  md:grid grid-cols-3 gap-5 lg:space-y-0 space-y-6">
               {filteredProjects.reverse().map((project) => (
                 <Project key={project._id} project={project} />

@@ -18,7 +18,7 @@ const Project = ({ project }) => {
   };
 
   return (
-    <div>
+    <div className="">
       <p>
         <span className="font-semibold text-s3">{projectNo}</span>{" "}
         <span>{`//_${name}`}</span>

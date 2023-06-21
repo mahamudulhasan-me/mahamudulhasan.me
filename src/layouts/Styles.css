@@ -34,10 +34,11 @@
   transform: translate(-50%, -50%);
   width: 50vw;
   height: 50vh;
+  
 }
 .animate-rotate {
   -webkit-animation: rotate 70s ease-in-out infinite;
-  animation: rotate 50s ease-in-out infinite;
+  animation: rotate 20s ease-in-out infinite;
 }
 
 @keyframes rotate {

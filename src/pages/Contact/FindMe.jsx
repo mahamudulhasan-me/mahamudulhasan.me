@@ -19,8 +19,8 @@ const FindMe = () => {
         data-aos="fade-right"
         onClick={() => setShowInfo(!showInfo)}
         className={`${
-          showInfo ? "text-white" : ""
-        } pl-4 border-y border-p4 w-full h-10 flex gap-1 items-center px-3 cursor-pointer bg-p4 lg:text-s1 text-white md:bg-transparent`}
+          showInfo ? "text-white" : "lg:text-s1"
+        } pl-4 border-y border-p4 w-full h-10 flex gap-1 items-center px-3 cursor-pointer bg-p4  text-white md:bg-transparent`}
       >
         {showInfo ? (
           <RiArrowDownSFill size={24} />

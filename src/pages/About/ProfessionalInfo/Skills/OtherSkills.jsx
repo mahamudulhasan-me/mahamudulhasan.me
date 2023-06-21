@@ -1,10 +1,9 @@
 import { FaGitAlt, FaPython } from "react-icons/fa";
-import { RiToolsFill } from "react-icons/ri";
+import { RiGithubFill, RiToolsFill } from "react-icons/ri";
 import axios from "../../../../assets/images/skills/Azios.png";
 import django from "../../../../assets/images/skills/Django.png";
 import figma from "../../../../assets/images/skills/Figma.png";
 import git from "../../../../assets/images/skills/Git.png";
-import github from "../../../../assets/images/skills/GitHub.png";
 import python from "../../../../assets/images/skills/Python.png";
 import reactQuery from "../../../../assets/images/skills/react-query-seeklogo.com.svg";
 import reactRouter from "../../../../assets/images/skills/react-router.256x140.png";
@@ -12,8 +11,8 @@ import reactRouter from "../../../../assets/images/skills/react-router.256x140.p
 const OtherSkills = () => {
   return (
     // other skill scetion
-    <div className="md:px-10 lg:hidden block">
-      <p className="mb-3">
+    <div className="md:px-10  block z-50">
+      <p className="mb-3 lg:hidden">
         <span className="text-white">//professional-info</span> / skills
       </p>
       {/* git and github  */}
@@ -26,11 +25,11 @@ const OtherSkills = () => {
           <p>git</p>
         </figure>
         <figure className="text-center">
-          <img src={github} alt="github" className="w-16" />
+          {/* <img src={github} alt="github" className="w-16" /> */}
+          <RiGithubFill size={64} />
           <p>github</p>
         </figure>
       </div>
-
       <h2 className=" text-2xl  mb-4  flex items-center mt-10">
         <RiToolsFill /> _different tools
       </h2>
