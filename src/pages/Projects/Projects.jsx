@@ -20,24 +20,6 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [filteredProjects, setFilteredProjects] = useState([]);
-  const [topValue, setTopValue] = useState(57); // Default top value
-
-  useEffect(() => {
-    const handleResize = () => {
-      const isMobile = window.innerWidth <= 600; // Define your mobile breakpoint here
-      const newTopValue = isMobile ? 0 : 57; // Modify the top value based on device
-
-      setTopValue(newTopValue);
-    };
-
-    handleResize(); // Set initial value
-
-    window.addEventListener("resize", handleResize); // Listen for resize events
-
-    return () => {
-      window.removeEventListener("resize", handleResize); // Cleanup event listener
-    };
-  }, []);
 
   useEffect(() => {
     fetchProjects();
@@ -87,7 +69,7 @@ const Projects = () => {
       <Helmet>
         <title>Projects | Mahamudul Hasan</title>
       </Helmet>
-      <div className="lg:min-h-full w-full text-s1 lg:flex">
+      <div className="lg:h-full w-full text-s1 lg:flex">
         <div className="min-w-[21%]  border-r border-p4 ">
           <div
             data-aos="fade-down"
@@ -166,7 +148,7 @@ const Projects = () => {
           )}
         </div>
 
-        <div className="lg:min-w-[calc(100vw-20rem)]  text-s1">
+        <div className="lg:min-w-[calc(100vw-0)]  text-s1">
           <div className={`border-b  border-p4 w-full h-10`}>
             <span className="border-r border-p4  h-full flex gap-1 items-center px-3 cursor-pointer w-fit">
               projects-
@@ -176,7 +158,7 @@ const Projects = () => {
               <RiCloseFill size={20} />
             </span>
           </div>
-          <div className="md:border-r border-p4  md:mr-6 md:min-h-[calc(100%-40px)] pb-20">
+          <div className="md:border-r border-p4  md:mr-6 md:min-h-[calc(100%-40px)] md:pb-0 pb-20">
             <div className="lg:pt-20 pt-10  lg:px-10 px-5  md:grid grid-cols-3 grid-rows-1 gap-5 lg:space-y-0 space-y-6">
               {filteredProjects.slice(0, 3).map((project) => (
                 <Project key={project._id} project={project} />

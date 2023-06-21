@@ -13,7 +13,7 @@ const Main = () => {
   }, []);
   return (
     <div className=" min-h-[calc(100vh-2px)] content-container z-auto">
-      {/* <div className="-z-30  animate-content animate-rotate"></div> */}
+      <div className="-z-30  animate-content animate-rotate"></div>
       <Navbar setZIndex={setZIndex} />
       <div className="h-[calc(100vh-4rem)]">
         <Outlet />

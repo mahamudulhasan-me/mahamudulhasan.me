@@ -2,6 +2,7 @@ import { useState } from "react";
 import bootstrap from "../../assets/images/skills/bootstrap.png";
 import css from "../../assets/images/skills/css-3.png";
 import html from "../../assets/images/skills/html-5.png";
+import react from "../../assets/images/skills/physics.png";
 import ModalProject from "./ModalProject";
 
 const Project = ({ project }) => {
@@ -28,13 +29,14 @@ const Project = ({ project }) => {
           src={
             (imageTag === "html" && html) ||
             (imageTag === "css" && css) ||
-            (imageTag === "bootstrap" && bootstrap)
+            (imageTag === "bootstrap" && bootstrap) ||
+            (imageTag === "react" && react)
           }
           alt=""
           className="absolute w-10 right-4 top-4"
         />
         <figure className=" w-full h-36 rounded-t-2xl border-b border-p4 overflow-hidden">
-          <img src={image} alt="" />
+          <img src={image} alt="" className="h-full w-full" />
         </figure>
 
         <div className="mx-8">
