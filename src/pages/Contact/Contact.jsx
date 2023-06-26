@@ -17,24 +17,26 @@ const Contact = () => {
   const [success, setSuccess] = useState(false);
 
   const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_nli385v",
-        "template_3h2bc0f",
-        form.current,
-        "zlcygz2kBru-sUdFt"
-      )
-      .then((response) => {
-        if (response.status === 200) {
-          setSuccess(true);
-        }
-      })
-      .catch((error) => {
-        console.error("Error sending email:", error);
-      });
+    if (email && message) {
+      e.preventDefault();
+      emailjs
+        .sendForm(
+          "service_nli385v",
+          "template_3h2bc0f",
+          form.current,
+          "zlcygz2kBru-sUdFt"
+        )
+        .then((response) => {
+          if (response.status === 200) {
+            setSuccess(true);
+          }
+        })
+        .catch((error) => {
+          console.error("Error sending email:", error);
+        });
+    }
   };
+
   const customTheme = {
     background: "transparent",
     fontSize: "16px",
@@ -60,7 +62,7 @@ const Contact = () => {
             </div>
             <div className="flex justify-center items-center h-full w-full">
               {success ? (
-                <div className="text-center">
+                <div className="text-center" data-aos="zoom-out">
                   <h2 className="text-3xl text-white flex justify-center items-center">
                     Thank You! <FaHandPeace color="#F9BF2F" />
                   </h2>
@@ -94,8 +96,9 @@ const Contact = () => {
                     <label htmlFor="name">_email</label>
                     <br />
                     <input
-                      type="text"
+                      type="email"
                       name="user_email"
+                      required
                       onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
@@ -104,6 +107,7 @@ const Contact = () => {
                     <br />
                     <textarea
                       name="message"
+                      required
                       onChange={(e) => setMessage(e.target.value)}
                       className="md:w-[23rem] w-[20rem] h-36 bg-p3 rounded-lg px-3 py-4 outline-none border border-p4 mt-2"
                     ></textarea>
