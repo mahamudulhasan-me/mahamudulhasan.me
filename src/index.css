@@ -45,10 +45,33 @@ body {
   transform: unset;
 }
 
-[data-aos] {
+/* [data-aos] {
   z-index: 1;
   pointer-events: none;
   &.aos-animate {
     pointer-events: auto;
+  }
+} */
+
+.image-gallery-image {
+  @apply rounded-t-xl;
+}
+
+.vertical-timeline::before {
+  @apply w-[2px] bg-p4;
+}
+.vertical-timeline-element-content {
+  -webkit-box-shadow: 0 3px 0 #1e2d3d;
+  box-shadow: 0 3px 0 #1e2d3d;
+  background: transparent;
+  border: 1px solid #1e2d3d;
+  padding: 1rem 1rem 0;
+}
+.vertical-timeline-element-icon {
+  @apply ring ring-p4;
+}
+@media only screen and (min-width: 1170px) {
+  .vertical-timeline-element {
+    margin: 0.8rem 0;
   }
 }

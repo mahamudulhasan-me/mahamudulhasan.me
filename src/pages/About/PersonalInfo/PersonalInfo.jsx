@@ -11,11 +11,10 @@ import NavBio from "../../../components/AboutInfoNav/NavBio";
 import NavContact from "../../../components/AboutInfoNav/NavContact";
 import NavEducation from "../../../components/AboutInfoNav/NavEducation";
 import NavInterested from "../../../components/AboutInfoNav/NavInterested";
-import Institute from "./Education/Institute";
-import University from "./Education/University";
+import Education from "./Education";
 const PersonalInfo = () => {
   const [showInfo, setShowInfo] = useState(true);
-  const [selectedMenu, setSelectedMenu] = useState("bio");
+  const [selectedMenu, setSelectedMenu] = useState("education");
   const [topValue, setTopValue] = useState(57); // Default top value
 
   useEffect(() => {
@@ -124,6 +123,10 @@ const PersonalInfo = () => {
                 data-aos="zoom-in"
                 className={`pl-10 pt-4 space-y-4 border-l border-p4 md:border-l-0`}
               >
+                <NavEducation
+                  setSelectedMenu={setSelectedMenu}
+                  selectedMenu={selectedMenu}
+                />
                 <NavBio
                   setSelectedMenu={setSelectedMenu}
                   selectedMenu={selectedMenu}
@@ -134,7 +137,6 @@ const PersonalInfo = () => {
                   selectedMenu={selectedMenu}
                 />
                 {/* education  */}
-                <NavEducation selectedStatus={setSelectedMenu} />
               </div>
             ) : (
               ""
@@ -155,6 +157,7 @@ const PersonalInfo = () => {
           </div>
 
           <div className="px-3 my-5">
+            {selectedMenu === "education" && <Education />}
             {selectedMenu === "bio" && (
               <CommentSyntaxHighlighter responsiveContent={responsiveBio}>
                 {bio}
@@ -168,8 +171,6 @@ const PersonalInfo = () => {
                 {interested}
               </CommentSyntaxHighlighter>
             )}
-            {selectedMenu === "institute" && <Institute />}
-            {selectedMenu === "university" && <University />}
           </div>
         </Sticky>
       </div>

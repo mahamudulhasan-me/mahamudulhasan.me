@@ -27,7 +27,10 @@ const Footer = () => {
         className="min-w-2/12 lg:border-l lg:border-r-0 lg:pr-0 pl-5 h-full flex justify-end items-center border-p4 border-r pr-5
       "
       >
-        <Link className="flex justify-end items-center gap-2 transition-all">
+        <Link
+          to={"https://github.com/mahamudulhasan-me"}
+          className="flex justify-end items-center gap-2 transition-all"
+        >
           <span className="hover:text-s3 hidden lg:block">
             @mahamudulhasan-me
           </span>

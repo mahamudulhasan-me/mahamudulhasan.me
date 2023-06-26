@@ -1,0 +1,36 @@
+[
+  {
+    "_id": 1,
+    "projectNo": "Project 1",
+    "name": "newYear-newMe",
+    "image": "./projectImage/newyear-newme.png",
+    "category": ["html", "css"],
+    "technologies": ["html", "css"],
+    "features": ["banner-section", "features", "blog-section", "footer"],
+    "liveLink": "https://mahamudulhasan-me.github.io/newYear-newMe/",
+    "codeLink": "https://github.com/mahamudulhasan-me/newYear-newMe",
+    "description": "This is the description of Project 1."
+  },
+  {
+    "_id": 2,
+    "projectNo": "Project 2",
+    "name": "g3-architects",
+    "image": "./projectImage/g3Architecute.jpg",
+    "category": ["css", "html"],
+    "technologies": ["html", "css"],
+    "liveLink": "https://mahamudulhasan-me.github.io/g3Architects/",
+    "codeLink": "https://github.com/mahamudulhasan-me/g3Architects",
+    "description": "This is the description of Project 1."
+  },
+  {
+    "_id": 3,
+    "projectNo": "Project 3",
+    "name": "legal-solution",
+    "image": "./projectImage/legal-solution.png",
+    "category": ["bootstrap"],
+    "technologies": ["html", "css", "bootstrap"],
+    "liveLink": "https://musical-lebkuchen-3bf71d.netlify.app",
+    "codeLink": "https://github.com/mahamudulhasan-me/legal-solution.git",
+    "description": "This is the description of Project 1."
+  }
+]

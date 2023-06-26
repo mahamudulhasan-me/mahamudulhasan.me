@@ -1,6 +1,8 @@
+import emailjs from "emailjs-com";
 import moment from "moment/moment";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Helmet } from "react-helmet";
+import { FaHandPeace } from "react-icons/fa";
 import { RiCloseFill } from "react-icons/ri";
 import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight";
 import { gradientDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
@@ -8,9 +10,31 @@ import ContactNumber from "./ContactNumber";
 import FindMe from "./FindMe";
 
 const Contact = () => {
+  const form = useRef();
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [email, setEmail] = useState("");
+  const [success, setSuccess] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_nli385v",
+        "template_3h2bc0f",
+        form.current,
+        "zlcygz2kBru-sUdFt"
+      )
+      .then((response) => {
+        if (response.status === 200) {
+          setSuccess(true);
+        }
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+      });
+  };
   const customTheme = {
     background: "transparent",
     fontSize: "16px",
@@ -35,42 +59,63 @@ const Contact = () => {
               </span>
             </div>
             <div className="flex justify-center items-center h-full w-full">
-              <form className="contact-form space-y-6">
-                <div>
-                  <label htmlFor="name">_name</label>
-                  <br />
-                  <input
-                    type="text"
-                    name="name"
-                    className=""
-                    onChange={(e) => setName(e.target.value)}
-                  />
+              {success ? (
+                <div className="text-center">
+                  <h2 className="text-3xl text-white flex justify-center items-center">
+                    Thank You! <FaHandPeace color="#F9BF2F" />
+                  </h2>
+                  <p>
+                    Your message has been accepted. <br /> You will recieve
+                    answer really soon!
+                  </p>
+                  <button
+                    onClick={() => setSuccess(false)}
+                    className="mt-4 py-3 px-6 rounded-lg text-white bg-[#1C2B3A] hover:bg-[#263B50] transition-all"
+                  >
+                    send-new-message
+                  </button>
                 </div>
-                <div>
-                  <label htmlFor="name">_email</label>
-                  <br />
-                  <input
-                    type="text"
-                    name="name"
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                </div>
-                <div>
-                  <label htmlFor="name">_message</label>
-                  <br />
-                  <textarea
-                    name="message"
-                    onChange={(e) => setMessage(e.target.value)}
-                    className="md:w-[23rem] w-[20rem] h-36 bg-p3 rounded-lg px-3 py-4 outline-none border border-p4 mt-2"
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className=" py-3 px-6 rounded-lg text-white bg-[#1C2B3A] hover:bg-[#263B50] transition-all"
+              ) : (
+                <form
+                  ref={form}
+                  onSubmit={sendEmail}
+                  className="contact-form space-y-6"
                 >
-                  submit-message
-                </button>
-              </form>
+                  <div>
+                    <label htmlFor="name">_name</label>
+                    <br />
+                    <input
+                      type="text"
+                      name="user_name"
+                      onChange={(e) => setName(e.target.value)}
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="name">_email</label>
+                    <br />
+                    <input
+                      type="text"
+                      name="user_email"
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="name">_message</label>
+                    <br />
+                    <textarea
+                      name="message"
+                      onChange={(e) => setMessage(e.target.value)}
+                      className="md:w-[23rem] w-[20rem] h-36 bg-p3 rounded-lg px-3 py-4 outline-none border border-p4 mt-2"
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    className=" py-3 px-6 rounded-lg text-white bg-[#1C2B3A] hover:bg-[#263B50] transition-all"
+                  >
+                    submit-message
+                  </button>
+                </form>
+              )}
             </div>
           </div>
         </div>

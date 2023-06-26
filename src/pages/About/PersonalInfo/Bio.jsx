@@ -1,4 +1,5 @@
 import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight";
+import { atelierLakesideDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 const Bio = () => {
   return (

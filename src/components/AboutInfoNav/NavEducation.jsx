@@ -1,45 +1,21 @@
-import { useState } from "react";
-import { FaGraduationCap } from "react-icons/fa";
-import {
-  RiArrowDownSLine,
-  RiArrowRightSLine,
-  RiFolder3Fill,
-} from "react-icons/ri";
+import { RiFolder3Fill } from "react-icons/ri";
 
-const NavEducation = ({ selectedStatus }) => {
-  // const [eduInstitute, setEduInstitute] = useState("");
-  const [showInfo, setShowInfo] = useState(false);
+const NavEducation = ({ setSelectedMenu, selectedMenu }) => {
   return (
     <>
       <div
-        onClick={() => setShowInfo(!showInfo)}
-        className="flex items-center gap-1 cursor-pointer transition-all"
+        onClick={() => setSelectedMenu("education")}
+        className="flex items-center gap-1 cursor-pointer "
       >
-        {showInfo ? (
-          <RiArrowDownSLine size={24} />
-        ) : (
-          <RiArrowRightSLine size={24} />
-        )}{" "}
-        <RiFolder3Fill size={24} color="#3A49A4" /> education
+        <RiFolder3Fill size={24} color="#3A49A4" />{" "}
+        <span
+          className={`${
+            selectedMenu == "education" ? "text-white" : "text-s1"
+          }`}
+        >
+          education
+        </span>
       </div>
-      {showInfo ? (
-        <div data-aos="fade-down" className="pl-8 mt-3 space-y-2">
-          <p
-            onClick={() => selectedStatus("institute")}
-            className="flex items-center gap-1"
-          >
-            <FaGraduationCap size={24} /> institute
-          </p>
-          <p
-            onClick={() => selectedStatus("university")}
-            className="flex items-center gap-1"
-          >
-            <FaGraduationCap size={24} /> university
-          </p>
-        </div>
-      ) : (
-        ""
-      )}
     </>
   );
 };

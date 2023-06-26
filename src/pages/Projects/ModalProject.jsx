@@ -25,26 +25,12 @@ const ModalProject = ({ isOpen, closeModal, content }) => {
     return null;
   }
   console.log(images);
-  const imageReadyToView = images.map((image) => {
+  const imageReadyToView = images?.map((image) => {
     return {
       original: image,
       thumbnail: image,
     };
   });
-  // const images = [
-  //   {
-  //     original: "https://picsum.photos/id/1015/1000/600/",
-  //     thumbnail: "https://picsum.photos/id/1015/250/150/",
-  //   },
-  //   {
-  //     original: "https://picsum.photos/id/1015/1000/600/",
-  //     thumbnail: "https://picsum.photos/id/1015/250/150/",
-  //   },
-  //   {
-  //     original: "https://picsum.photos/id/1019/1000/600/",
-  //     thumbnail: "https://picsum.photos/id/1019/250/150/",
-  //   },
-  // ];
 
   return (
     <div
@@ -53,7 +39,7 @@ const ModalProject = ({ isOpen, closeModal, content }) => {
     >
       <div className=" bg-opacity-70 md:w-1/2 relative py-10 rounded-xl ">
         <span
-          className="text-red-700 lg:top-10 top-5 right-10 absolute cursor-pointer "
+          className="text-red-700 lg:top-12 top-4 ring rounded-full ring-p4 right-0 absolute cursor-pointer "
           onClick={closeModal}
         >
           <RiCloseLine size={40} />

@@ -7,7 +7,7 @@ const NavBio = ({ setSelectedMenu, selectedMenu }) => {
       onClick={() => {
         setSelectedMenu("bio");
       }}
-      className="flex items-center gap-1 cursor-pointer"
+      className="flex items-center gap-1 cursor-pointer "
     >
       <RiFolder3Fill size={24} color="#E99287" />{" "}
       <span className={`${selectedMenu === "bio" ? "text-white" : "text-s1"}`}>

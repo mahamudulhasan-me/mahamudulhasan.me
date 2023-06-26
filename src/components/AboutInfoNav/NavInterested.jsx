@@ -5,7 +5,7 @@ const NavInterested = ({ setSelectedMenu, selectedMenu }) => {
     <>
       <div
         onClick={() => setSelectedMenu("interested")}
-        className="flex items-center gap-1 cursor-pointer"
+        className="flex items-center gap-1 cursor-pointer lg:pb-5"
       >
         <RiFolder3Fill size={24} color="#43D9AD" />{" "}
         <span

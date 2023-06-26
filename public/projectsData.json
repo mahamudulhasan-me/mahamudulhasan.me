@@ -3,12 +3,14 @@
     "_id": 12,
     "projectNo": "Project 12",
     "name": "dance-school",
-    "image": "./projectImage/dance-school/dance-school.jpg",
+    "image": "https://i.ibb.co/8KVkJ6L/slider2-1.jpg",
     "images": [
-      "./projectImage/dance-school/dance-school_banner.png",
-      "./projectImage/dance-school/dance-school_popularClass.png",
-      "./projectImage/dance-school/dance-school_popularInsturctor.png",
-      "./projectImage/dance-school/dance-school_signin.png"
+      "https://i.ibb.co/j6jcjx9/dance-school-banner.png",
+      "https://i.ibb.co/tHFTW9N/dance-school-popular-Class.png",
+      "https://i.ibb.co/s1rXpvv/dance-school-popular-Insturctor.png",
+      "https://i.ibb.co/qJhNsqK/dance-school-signin.png",
+      "https://i.ibb.co/60w6pL8/dance-school-payment.png",
+      "https://i.ibb.co/jJ8Q5NZ/dance-school-Dashboard.png"
     ],
     "category": ["react", "fullStack", "tailwind", "express"],
     "technologies": [
@@ -37,7 +39,17 @@
     "_id": 11,
     "projectNo": "Project 11",
     "name": "toy-town",
-    "image": "./projectImage/toy-town.jpg",
+    "image": "https://i.ibb.co/D4tFnC9/banner2.jpg",
+    "images": [
+      "https://i.ibb.co/v4QJJnK/toytown-banner.png",
+      "https://i.ibb.co/Jq76Rxs/toy-town-sign-UP.png",
+      "https://i.ibb.co/8NW8bJ7/toy-town-add-Toy.png",
+      "https://i.ibb.co/X4nv1jH/toy-town-blog.png",
+      "https://i.ibb.co/rfmzd6Y/toy-town-footer.png",
+      "https://i.ibb.co/yYVH8B9/toy-town-my-Toy.png",
+      "https://i.ibb.co/FbP0Y27/toy-town-shop-By-Category.png",
+      "https://i.ibb.co/gRwnFGJ/toy-town-all-Toys.png"
+    ],
     "category": ["react", "fullStack", "tailwind", "express"],
     "technologies": [
       "html",
@@ -66,7 +78,16 @@
     "_id": 10,
     "projectNo": "Project 10",
     "name": "cook-and-yummy",
-    "image": "./projectImage/ckrecipe4.jpg",
+    "image": "https://i.ibb.co/Tm4NtcH/cook-banner.png",
+    "images": [
+      "https://i.ibb.co/Tm4NtcH/cook-banner.png",
+      "https://i.ibb.co/NZPFNSM/cook-signup.png",
+      "https://i.ibb.co/smHxhkJ/cook-best-chef.png",
+      "https://i.ibb.co/878bqmJ/cook-best-recipe.png",
+      "https://i.ibb.co/871ntDg/cook-footer.png",
+      "https://i.ibb.co/k1kM6Ft/details.png",
+      "https://i.ibb.co/XF1kb03/recipi-details.png"
+    ],
     "category": ["react", "tailwind", "express"],
     "technologies": [
       "html",
@@ -75,8 +96,7 @@
       "javascript",
       "react",
       "firebase",
-      "express.js",
-      "mongodb"
+      "express.js"
     ],
     "features": [
       "navigation",
@@ -91,39 +111,5 @@
     "liveLink": "https://cook-and-yummy.web.app/",
     "codeLink": "https://github.com/mahamudulhasan-me/cook-and-yammy.git",
     "description": "Cook and Yummy: An enticing culinary haven where food lovers can explore a world of delicious recipes, professional cooking tips, and mouthwatering inspiration, empowering everyone to unleash their inner chef and create delectable meals with confidence."
-  },
-  {
-    "_id": 1,
-    "projectNo": "Project 1",
-    "name": "newYear-newMe",
-    "image": "./projectImage/newyear-newme.png",
-    "category": ["html", "css"],
-    "technologies": ["html", "css"],
-    "features": ["banner-section", "features", "blog-section", "footer"],
-    "liveLink": "https://mahamudulhasan-me.github.io/newYear-newMe/",
-    "codeLink": "https://github.com/mahamudulhasan-me/newYear-newMe",
-    "description": "This is the description of Project 1."
-  },
-  {
-    "_id": 2,
-    "projectNo": "Project 2",
-    "name": "g3-architects",
-    "image": "./projectImage/g3Architecute.jpg",
-    "category": ["css", "html"],
-    "technologies": ["html", "css"],
-    "liveLink": "https://mahamudulhasan-me.github.io/g3Architects/",
-    "codeLink": "https://github.com/mahamudulhasan-me/g3Architects",
-    "description": "This is the description of Project 1."
-  },
-  {
-    "_id": 3,
-    "projectNo": "Project 3",
-    "name": "legal-solution",
-    "image": "./projectImage/legal-solution.png",
-    "category": ["bootstrap"],
-    "technologies": ["html", "css", "bootstrap"],
-    "liveLink": "https://musical-lebkuchen-3bf71d.netlify.app",
-    "codeLink": "https://github.com/mahamudulhasan-me/legal-solution.git",
-    "description": "This is the description of Project 1."
   }
 ]
