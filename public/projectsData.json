@@ -3,7 +3,13 @@
     "_id": 12,
     "projectNo": "Project 12",
     "name": "dance-school",
-    "image": "./projectImage/dance-school.jpg",
+    "image": "./projectImage/dance-school/dance-school.jpg",
+    "images": [
+      "./projectImage/dance-school/dance-school_banner.png",
+      "./projectImage/dance-school/dance-school_popularClass.png",
+      "./projectImage/dance-school/dance-school_popularInsturctor.png",
+      "./projectImage/dance-school/dance-school_signin.png"
+    ],
     "category": ["react", "fullStack", "tailwind", "express"],
     "technologies": [
       "html",

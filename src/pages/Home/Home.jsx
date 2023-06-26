@@ -80,7 +80,11 @@ const Home = () => {
                 <span className="text-white"> = </span>
                 <span className="text-a3">
                   “
-                  <Link className="underline ">
+                  <Link
+                    className="underline"
+                    download
+                    to="https://drive.google.com/u/0/uc?id=1OPGLMz8maCpbI8Hum51L7HfGQ5Y12QQo&export=download"
+                  >
                     https://docs.google.com/resume/
                   </Link>
                   ”

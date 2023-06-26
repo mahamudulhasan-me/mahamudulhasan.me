@@ -1,17 +1,18 @@
 import { MdViewInAr } from "react-icons/md";
 import { RiCheckFill, RiCloseLine, RiCodeSSlashFill } from "react-icons/ri";
 import { RxDotFilled } from "react-icons/rx";
+import ReactImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
 import { Link } from "react-router-dom";
 import bootstrap from "../../assets/images/skills/bootstrap.png";
 import css from "../../assets/images/skills/css-3.png";
 import html from "../../assets/images/skills/html-5.png";
 import "../../layouts/Styles.css";
-
 const ModalProject = ({ isOpen, closeModal, content }) => {
   const {
     projectNo,
     name,
-    image,
+    images,
     category,
     liveLink,
     codeLink,
@@ -23,6 +24,27 @@ const ModalProject = ({ isOpen, closeModal, content }) => {
   if (!isOpen) {
     return null;
   }
+  console.log(images);
+  const imageReadyToView = images.map((image) => {
+    return {
+      original: image,
+      thumbnail: image,
+    };
+  });
+  // const images = [
+  //   {
+  //     original: "https://picsum.photos/id/1015/1000/600/",
+  //     thumbnail: "https://picsum.photos/id/1015/250/150/",
+  //   },
+  //   {
+  //     original: "https://picsum.photos/id/1015/1000/600/",
+  //     thumbnail: "https://picsum.photos/id/1015/250/150/",
+  //   },
+  //   {
+  //     original: "https://picsum.photos/id/1019/1000/600/",
+  //     thumbnail: "https://picsum.photos/id/1019/250/150/",
+  //   },
+  // ];
 
   return (
     <div
@@ -39,7 +61,7 @@ const ModalProject = ({ isOpen, closeModal, content }) => {
 
         <div
           // data-aos="zoom-in"
-          className="md:w-4/5 mx-auto my-auto h-screen  overflow-y-scroll content-container px-2 "
+          className="md:w-[90%] mx-auto my-auto h-screen  overflow-y-scroll content-container px-2 "
         >
           <div>
             <p className="text-lg">
@@ -56,8 +78,8 @@ const ModalProject = ({ isOpen, closeModal, content }) => {
                 alt=""
                 className="absolute w-10 right-4 top-4"
               />
-              <figure className="w-full h-56 rounded-t-2xl border-b border-p4 overflow-hidden">
-                <img src={image} alt="" className="h-full w-full" />
+              <figure className="w-full  rounded-t-2xl border-b border-p4 ">
+                <ReactImageGallery items={imageReadyToView} showNav={false} />
               </figure>
 
               <div className="mx-8">

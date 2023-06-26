@@ -11,6 +11,7 @@ const Main = () => {
   useEffect(() => {
     Aos.init({ offset: 200 });
   }, []);
+
   return (
     <div className=" min-h-[calc(100vh-2px)] content-container z-auto">
       <div className="-z-30  animate-content animate-rotate"></div>
