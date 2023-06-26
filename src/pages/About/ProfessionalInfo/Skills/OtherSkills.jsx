@@ -1,16 +1,14 @@
-import { FaGitAlt, FaPython } from "react-icons/fa";
+import { FaGitAlt } from "react-icons/fa";
 import { RiGithubFill, RiToolsFill } from "react-icons/ri";
 import axios from "../../../../assets/images/skills/Azios.png";
-import django from "../../../../assets/images/skills/Django.png";
 import figma from "../../../../assets/images/skills/Figma.png";
 import git from "../../../../assets/images/skills/Git.png";
-import python from "../../../../assets/images/skills/Python.png";
 import reactQuery from "../../../../assets/images/skills/react-query-seeklogo.com.svg";
 import reactRouter from "../../../../assets/images/skills/react-router.256x140.png";
 
 const OtherSkills = () => {
   return (
-    // other skill scetion
+    // other skill section
     <div className="md:px-10">
       <p className="mb-3 lg:hidden block">
         <span className="text-white">//professional-info</span> / skills
@@ -33,7 +31,7 @@ const OtherSkills = () => {
       <h2 className=" text-2xl  mb-4  flex items-center mt-10">
         <RiToolsFill /> _different tools
       </h2>
-      <div className="flex  items-center justify-between">
+      <div className="flex  items-center justify-between flex-wrap">
         <figure>
           <img src={reactRouter} alt="react-router" className="w-28" />
           <p>react-router</p>
@@ -54,8 +52,16 @@ const OtherSkills = () => {
           <img src={figma} alt="figma" className="w-16" />
           <p>figma</p>
         </figure>
+        <figure className="text-center mt-2">
+          <img
+            src="https://i.ibb.co/p3dNcJ5/Firebase.png"
+            alt="figma"
+            className="w-16"
+          />
+          <p>firebase</p>
+        </figure>
       </div>
-      <h2 className="text-2xl mt-10 mb-4  flex items-center">
+      {/* <h2 className="text-2xl mt-10 mb-4  flex items-center">
         <FaPython /> _other language
       </h2>
       <div className="flex gap-10 items-center">
@@ -67,7 +73,7 @@ const OtherSkills = () => {
           <img src={django} alt="django" className="w-16" />
           <p>Django</p>
         </figure>
-      </div>
+      </div> */}
     </div>
   );
 };

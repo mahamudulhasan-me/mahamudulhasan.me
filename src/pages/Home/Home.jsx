@@ -67,8 +67,14 @@ const Home = () => {
                 <span className="text-white"> = </span>
                 <span className="text-a3">
                   “
-                  <Link className="underline ">
-                    https://github.com/example/url
+                  <Link
+                    className="underline"
+                    target="_blank"
+                    to={
+                      "https://github.com/mahamudulhasan-me/mahamudulhasan.me/blob/main/src/components/SnakeGame/SnakeGame.jsx"
+                    }
+                  >
+                    github/mahamudulhasan-me/snake-game
                   </Link>
                   ”
                 </span>
